@@ -1,0 +1,48 @@
+/* Creación de variables CSS */
+:root {
+    --color-fondo-principal: #780000;
+    --color-iconos-redes: #C1121F;
+    --color-texto-barra-navegacion: #FDF0D5;
+    --color-fondo-barra-navegacion: #175676;
+    --color-fondo-paginas: #CCE6F4;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+#paginabody {
+    background-color: var(--color-fondo-paginas);
+}
+#textoNavbar {
+    color: var(--color-texto-barra-navegacion);
+}
+.iconoGolden {
+    width: 90px;
+}
+.iconoNavbar {
+    width: 35px;
+}
+
+/* Estilos de la barra de navegación */
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 104px; 
+}
+.navbar-brand {
+    position: relative;
+    right: 80px;
+}
+
+.golden {
+    position: absolute;
+    top: 14px;
+    left: 5;
+    z-index: 1;
+}
+
+.trainers {
+    position: relative;
+    top: 18px;
+}
+
+
+
