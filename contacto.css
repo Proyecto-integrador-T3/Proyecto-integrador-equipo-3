@@ -1,0 +1,46 @@
+/*Creacion de variables de color*/
+:root{
+    --letra: #780000;
+    --letrabotones: #FDF0D5;
+    --fondobody: #CCE6F4;
+}
+
+#titulo{
+    color: var(--letra);
+        text-align: center;
+}
+
+.dudas{
+    color: var(--letra);
+}
+
+.chamba{
+    color: var(--letra);
+}
+
+.infogolden{
+    color: var(--letra);
+}
+
+#datosaside{
+    color: var(--letra);
+}
+
+#botonenviar{
+    color: var(--letrabotones);
+    background-color: var(--letra);
+    height: 50px;
+    width: 130px;
+}
+
+body{
+    background-color: var(--fondobody);
+}
+
+#formulario{
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 737px;
+    display: grid;
+    justify-content: center;
+}
