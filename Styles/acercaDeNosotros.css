@@ -1,0 +1,19 @@
+#bodyGeneral {
+    background-color: #CCE6F4;
+}
+
+#tituloQuienesSomos {
+    color: #780000;
+    font-size: 85px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#textoQuienesSomos {
+    color: #780000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
