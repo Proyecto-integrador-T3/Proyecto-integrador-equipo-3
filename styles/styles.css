@@ -1,0 +1,26 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color-principal-paginas: #CCE6F4;
+    --color-barra-navegacion: #175676;
+    --color-texto-barra-navegacion: #3498db;
+    --color-footer: #780000;
+    --color-texto-dorado: #EDB33B;
+
+
+    --fuente-titutlos: "Poppins", sans-serif;
+    --fuente-parrafos: "Roboto" , sans-serif;
+
+    --tamaño-titulos: 85px;
+    --tamaño-subtitulos: 36px;
+    --tamaño-cuerpotexto: 30px;
+}
+body{
+    background-color: var(--color-principal-paginas);
+    overflow: hidden;
+}
+
+
