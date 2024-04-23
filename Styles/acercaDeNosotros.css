@@ -1,5 +1,5 @@
 
-#div-somos, #div-valores {
+#div-body, #div-objetivos {
     background-color: #CCE6F4;
 }
 
@@ -13,6 +13,7 @@
 
 #textoQuienesSomos, #listado-valores, #texto-vision, #texto-mision {
     color: #780000;
+    font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -33,6 +34,11 @@
    font-style: normal;
   }
 
-#div-valores, #div-somos {
+#div-objetivos, #div-body {
     padding-top: 10px;
+}
+
+#columna-mision, #columna-vision, #columna-valores {
+    border:5px dotted #780000;
+    background-color: beige;
 }
