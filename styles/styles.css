@@ -6,9 +6,10 @@
     --color-texto-barra-navegacion: #FDF0D5;
     --color-fondo-barra-navegacion: #175676;
     --color-fondo-paginas: #CCE6F4;
+    --color-dorado: #EDB33B;
 
     --fuente-principal: 'Roboto', sans-serif;
-    --fuente-titutlos: "Poppins", sans-serif;
+    --fuente-titulos: "Poppins", sans-serif;
 
     --tamaño-titulos: 85px;
     --tamaño-subtitulos: 36px;
@@ -55,6 +56,125 @@
 .trainers {
     position: relative;
     top: 18px;
+}
+
+/*
+    Aplicamos propiedades grid-view para hacer respinsiva la pagina 
+*/
+.row::after {
+    content: "";
+    clear: both;    
+    display: table;
+    
+}
+    
+[class*="col-"] {
+    float: left;
+}
+    
+.col-1 {width: 8.33%;}
+
+.col-2 {width: 16.66%;}
+
+.col-3 {width: 25%;}
+
+.col-4 {width: 33.33%;}
+
+.col-5 {width: 41.66%;}
+
+.col-6 {width: 50%;}
+
+.col-7 {width: 58.33%;}
+
+.col-8 {width: 66.66%;}
+
+.col-9 {width: 75%;}
+
+.col-10 {width: 83.33%;}
+
+.col-11 {width: 91.66%;}
+
+.col-12 {width: 100%,
+    margin 0;}
+
+div.fondo1_perro{
+    
+    background-image: url("../img/perro1.jpg");
+    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
+    background-position: center; /* Centra la imagen en el div */
+    min-height: 100vh; /* Establece una altura mínima para el div */
+    padding: 20px; /* Espacio dentro del div para los elementos internos */
+}
+
+#clm-0{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+}
+#container-clm{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+#clm-1 , #clm-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente en cada columna */
+    width: 50%;
+    
+    
+}
+
+#clm-1{
+    padding: 0px;
+    margin-right: 500px;
+    width: 50%;
+
+}
+#clm-2{
+    align-items: center; /* Esto es para alinear el botón y el título en el centro horizontalmente */
+    margin-left: 200px;
+    width: 50%;
+}
+.button--acerca{
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 100px;
+    padding: 10px 20px; /* Añade un relleno interno para que el texto no esté justo en el borde */
+    background-color: #780000; /* El color de fondo rojo oscuro */
+    border: none; /* Remueve el borde predeterminado */
+    border-radius: 20px; /* Da bordes redondeados al botón */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
+    transition: background-color 0.3s ease;
+}
+.button--acerca:hover {
+    background-color: #9a0000; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.tituloprincipal{
+    font-family: var(--fuente-titutlos);
+    font-size: var(--tamaño-titulos);
+    color: var(--color-dorado);
+    font-size: 60px;
+    text-align: center;
+
+    text-shadow: 1px 1px 1px black, 0 0 10px black;
+}
+.titulo1{
+    color: var(--color-dorado);
+    font-family: var(--fuente-titutlos);
+    font-size: var(--tamaño-subtitulos);
+    text-align: left;   
+    color: black;
+}
+.texto1{
+    font-size: var(--tamaño-cuerpotexto);
 }
 
 
