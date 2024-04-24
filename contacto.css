@@ -1,46 +1,79 @@
 /*Creacion de variables de color*/
-:root{
+:root {
     --letra: #780000;
     --letrabotones: #FDF0D5;
     --fondobody: #CCE6F4;
 }
 
-#titulo{
+#titulo {
     color: var(--letra);
-        text-align: center;
+    text-align: center;
+    width: 75%;
+
 }
 
-.dudas{
-    color: var(--letra);
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas:
+        "primera segunda tercera "
+        "cuarta cuarta tercera"; 
+    text-align: center;
 }
 
-.chamba{
+.dudas {
     color: var(--letra);
+    justify-self: center;
+    grid-area: primera;
+    width: 80%;
+    margin-left: 7%;
+    align-content: space-around;
+
 }
 
-.infogolden{
+.chamba {
     color: var(--letra);
+    grid-area: segunda;
+    width: 80%;
+    margin-left: 7%;
+    align-content: space-around;
 }
 
-#datosaside{
+.infogolden {
     color: var(--letra);
+    grid-area: cuarta; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "primera segunda tercera "; 
+    text-align: center;
+    align-content: center;
 }
 
-#botonenviar{
+#formulario {
+    background-color: #FFFFFF;
+    grid-area: tercera;
+    margin-right: 15px;
+    border-radius: 5px;
+    align-content: center;
+    box-shadow: 7px 7px var(--letra);
+}
+
+#datosaside {
+    color: var(--letra);
+    text-align: center;
+}
+
+#botonenviar {
     color: var(--letrabotones);
     background-color: var(--letra);
-    height: 50px;
-    width: 130px;
+    height: 40px;
+    width: 110px;
+    border-radius: 15px;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 
-body{
+body {
     background-color: var(--fondobody);
-}
-
-#formulario{
-    background-color: #FFFFFF;
-    width: 300px;
-    height: 737px;
-    display: grid;
-    justify-content: center;
 }
