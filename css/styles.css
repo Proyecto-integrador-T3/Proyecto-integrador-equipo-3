@@ -14,8 +14,9 @@
 #textoNavbar {
     color: var(--color-texto-barra-navegacion);
 }
+/* Estilos de los iconos de la barra de navegación */
 .iconoGolden {
-    width: 90px;
+    width: 150px;
 }
 .iconoNavbar {
     width: 35px;
@@ -26,22 +27,6 @@
     display: flex;
     align-items: center;
     margin-left: 104px; 
-}
-.navbar-brand {
-    position: relative;
-    right: 80px;
-}
-
-.golden {
-    position: absolute;
-    top: 14px;
-    left: 5;
-    z-index: 1;
-}
-
-.trainers {
-    position: relative;
-    top: 18px;
 }
 
 
