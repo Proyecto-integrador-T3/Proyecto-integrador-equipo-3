@@ -177,5 +177,15 @@ div.fondo1_perro{
     font-size: var(--tamaño-cuerpotexto);
 }
 
-
+.animated-background-title{
+    background-color: #175676;
+    text-align: center;
+    margin: 20px 450px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    
+    
+}
 
