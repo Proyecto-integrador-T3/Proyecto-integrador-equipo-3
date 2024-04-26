@@ -11,38 +11,54 @@
 #paginabody {
     background-color: var(--color-fondo-paginas);
 }
+
 #textoNavbar {
     color: var(--color-texto-barra-navegacion);
 }
+
+/* Estilos de los iconos de la barra de navegación */
 .iconoGolden {
-    width: 90px;
-}
-.iconoNavbar {
-    width: 35px;
+    width: 150px;
 }
 
-/* Estilos de la barra de navegación */
+.iconoNavbar {
+    width: 33px;
+    margin-right: 5px;
+}
+
 .nav-item {
     display: flex;
     align-items: center;
-    margin-left: 104px; 
-}
-.navbar-brand {
-    position: relative;
-    right: 80px;
+    margin-left: 104px;
+    transition: transform 0.5s ease;
 }
 
-.golden {
-    position: absolute;
-    top: 14px;
-    left: 5;
-    z-index: 1;
+.nav-item:hover {
+    transform: scale(1.1);
 }
 
-.trainers {
-    position: relative;
-    top: 18px;
+/* Estilos del carrousel */
+.fs-1,
+.fs-4 {
+    font-family: poppins;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 
+@media (max-width: 768px) {
+    .nav-item {
+        transition: none;
+        /* Anula la transición en dispositivos pequeños */
+    }
 
+    .iconoNavbar {
+        width: 16px;
+        /* Tamaño de iconos más pequeño para dispositivos pequeños */
+        margin-right: 8px;
+    }
+
+    .carousel-caption {
+        display: none;
+    }
+}
