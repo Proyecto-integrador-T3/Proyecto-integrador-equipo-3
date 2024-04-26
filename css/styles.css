@@ -63,6 +63,7 @@
     Aplicamos propiedades grid-view para hacer respinsiva la pagina 
 */
 
+
 .row::after {
     content: "";
     clear: both;    
@@ -100,49 +101,46 @@
     margin 0;}
 
 div.fondo1_perro{
-    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px auto;
+
+
     background-image: url("../img/perro1.jpg");
+    height: 100vh;
     background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
     background-position: center; /* Centra la imagen en el div */
     min-height: 100vh; /* Establece una altura mínima para el div */
     padding: 20px; /* Espacio dentro del div para los elementos internos */
+    
 }
 
-#clm-0{
+#columna-1{
+    
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px; 
+    justify-self: flex-start;
+    flex-direction: column;
+
+    overflow: auto;
+    margin-right: 300px;
+    margin-top: 100px;
+    height: 500px;
+    
 }
 #container-clm{
     display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-}
-
-#clm-1 , #clm-2{
-    display: flex;
+    justify-self: flex-end;
     flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente en cada columna */
-    width: 50%;
-    
-    
+    overflow: auto;
+    margin-left: 300px;
+    margin-top: 100px;
+    height: 500px;
 }
 
-#clm-1{
-    padding: 0px;
-    margin-right: 500px;
-    width: 50%;
-
-}
-#clm-2{
-    align-items: center; /* Esto es para alinear el botón y el título en el centro horizontalmente */
-    margin-left: 200px;
-    width: 50%;
-}
 .button--acerca{
     width: 200px;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 500px;
     padding: 10px 20px; /* Añade un relleno interno para que el texto no esté justo en el borde */
     background-color: #780000; /* El color de fondo rojo oscuro */
     border: none; /* Remueve el borde predeterminado */
@@ -160,13 +158,19 @@ div.fondo1_perro{
 }
 
 .tituloprincipal{
+    grid-column: 1/4;
+
     font-family: var(--fuente-titutlos);
-    font-size: var(--tamaño-titulos);
     color: var(--color-dorado);
     font-size: 60px;
     text-align: center;
 
     text-shadow: 1px 1px 1px black, 0 0 10px black;
+
+    
+}
+.tituloprincipal >h1{
+    font-size: 70px;
 }
 .titulo1{
     color: var(--color-dorado);
@@ -228,16 +232,9 @@ h2#titulo-nuestros{
 }
 .image-container{
     display: flex;
-    justify-self: flex-start;
-    align-items: center;
 
     width: 100%;
     height: 500px;
-    
-
-    margin: 200px 50px;
-    
-
     
 }
 .image-container img{
@@ -252,13 +249,12 @@ h2#titulo-nuestros{
 .text-container{
     max-width: 700px;
     height: 700px;
-    
-
     overflow:auto;
 
     display: flex;
     justify-self: center;
     flex-direction: column;
+    margin-top: 80px;
     
     
     
@@ -292,4 +288,35 @@ p#negritas{
     color: var(--color-dorado);
     font-weight: bold;
     text-align: center;
+}
+div#sabias-que{
+    background-image: url("/img/perrito-pug.jpg");
+    height: 100vh;
+    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
+    background-position: center; /* Centra la imagen en el div */
+    min-height: 100vh; /* Establece una altura mínima para el div */
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.contenedor-texto-sabias{
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+
+    overflow: auto;
+    margin-right: 80px;
+    text-align: center;
+    
+
+
+}
+.contenedor-texto-sabias > h1{
+    font-size: var(--tamaño-titulos);
+}
+.contenedor-texto-sabias > p{
+    text-align: left;
+    font-size: 34px;
 }
