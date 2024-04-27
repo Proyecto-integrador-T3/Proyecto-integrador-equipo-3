@@ -158,19 +158,22 @@ div.fondo1_perro{
 }
 
 .tituloprincipal{
+    max-height: 500px;
+
     grid-column: 1/4;
 
     font-family: var(--fuente-titutlos);
     color: var(--color-dorado);
     font-size: 60px;
     text-align: center;
-
     text-shadow: 1px 1px 1px black, 0 0 10px black;
 
+    
     
 }
 .tituloprincipal >h1{
     font-size: 70px;
+    height: 60px;
 }
 .titulo1{
     color: var(--color-dorado);
@@ -284,6 +287,9 @@ h2#titulo-nuestros{
 
     text-align: center;
     }
+
+/*----------------------------------------------------------------*/
+ /* Tercera Seccion    */    
 p#negritas{
     color: var(--color-dorado);
     font-weight: bold;
@@ -306,6 +312,7 @@ div#sabias-que{
     justify-self: flex-start;
     flex-direction: column;
 
+    height: 800px;
     overflow: auto;
     margin-right: 80px;
     text-align: center;
@@ -320,14 +327,23 @@ div#sabias-que{
     text-align: left;
     font-size: 34px;
 }
-/*----------------------------------------------------------------*/
- /* Tercera Seccion    */
+
 #seccion-sabias{
     height: 100vh; /* Ocupa toda la altura de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
+    text-align: center;
+}
+/*----------------------------------------------------------------*/
+ /* Cuarta Seccion    */  
+#seccion-servicios{
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
     text-align: center;
 }
  #contenedor-principal{
@@ -338,10 +354,6 @@ div#sabias-que{
 
     margin: 50px;
 
-    
-
-    
-   
 }
 #contenedor-principal >div{
     background-color: #D9D9D9;
