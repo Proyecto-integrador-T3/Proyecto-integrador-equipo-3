@@ -151,6 +151,7 @@
     color: var(--letrabotones);
     border-radius: 10px;
     text-align: center;
+    align-content: center;
 }
 
 /*Darle estilo al area de "Telefono*/
@@ -164,6 +165,7 @@
     color: var(--letrabotones);
     border-radius: 10px;
     text-align: center;
+    align-content: center;
 }
 
 /*Darle estilo al area de "Correo*/
@@ -177,6 +179,7 @@
     color: var(--letrabotones);
     border-radius: 10px;
     text-align: center;
+    align-content: center;
 }
 
 /*Darle color al Boton del Formulario*/
