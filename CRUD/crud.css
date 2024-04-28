@@ -1,0 +1,96 @@
+/* Creación de variables CSS */
+:root {
+    --color-fondo-principal: #780000;
+    --color-iconos-redes: #C1121F;
+    --color-texto-barra-navegacion: #FDF0D5;
+    --color-fondo-barra-navegacion: #175676;
+    --color-fondo-paginas: #CCE6F4;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+#paginabody {
+    background-color: var(--color-fondo-paginas);
+}
+
+#textoNavbar {
+    color: var(--color-texto-barra-navegacion);
+}
+
+/* Estilos de los iconos de la barra de navegación */
+.iconoGolden {
+    width: 150px;
+}
+
+.iconoNavbar {
+    width: 33px;
+    margin-right: 5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 104px;
+    transition: transform 0.5s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-item {
+        transition: none;
+        /* Anula la transición en dispositivos pequeños */
+    }
+
+    .iconoNavbar {
+        width: 16px;
+        /* Tamaño de iconos más pequeño para dispositivos pequeños */
+        margin-right: 8px;
+    }
+
+    /*------------ Login container ------------*/
+    .box-area {
+        width: 930px;
+    }
+
+    /*------------ Right box ------------*/
+    .right-box {
+        padding: 40px 30px 40px 40px;
+    }
+
+    /*------------ Custom Placeholder ------------*/
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    .rounded-4 {
+        border-radius: 20px;
+    }
+
+    .rounded-5 {
+        border-radius: 30px;
+    }
+
+    .mi-boton-verde {
+        background-color: #1f5175; /* Cambia este valor al color que desees */
+        color: white; /* Cambia el color del texto si es necesario */
+    }
+    
+    /*------------ For small screens------------*/
+    @media only screen and (max-width: 768px) {
+        .box-area {
+            margin: 0 10px;
+        }
+
+        .left-box {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .right-box {
+            padding: 20px;
+        }
+    }
