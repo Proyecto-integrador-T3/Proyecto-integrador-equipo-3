@@ -1,38 +1,14 @@
-/*
-* Importaciones de Hojas de Estilos Externas
-*/
-@import url(./primeraseccion.css);
-@import url(./segundaseccion.css);
-@import url(./terceraseccion.css);
-@import url(./cuartaseccion.css);
-@import url(./MediaQueries_Index.css);
-
-
 /* Creación de variables CSS */
 :root {
-    
     --color-fondo-principal: #780000;
     --color-iconos-redes: #C1121F;
     --color-texto-barra-navegacion: #FDF0D5;
     --color-fondo-barra-navegacion: #175676;
     --color-fondo-paginas: #CCE6F4;
-    --color-dorado: #EDB33B;
-
     --fuente-principal: 'Roboto', sans-serif;
-    --fuente-titulos: "Poppins", sans-serif;
-
-    --tamaño-titulos: 85px;
-    --tamaño-subtitulos: 36px;
-    --tamaño-cuerpotexto: 30px;
-
-}
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-#paginabody{
+#paginabody {
     background-color: var(--color-fondo-paginas);
 }
 
@@ -61,13 +37,6 @@
     transform: scale(1.1);
 }
 
-/* Estilos del carrousel */
-.fs-1,
-.fs-4 {
-    font-family: poppins;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-
-}
 
 
 @media (max-width: 768px) {
@@ -82,7 +51,46 @@
         margin-right: 8px;
     }
 
-    .carousel-caption {
-        display: none;
+    /*------------ Login container ------------*/
+    .box-area {
+        width: 930px;
     }
-}
+
+    /*------------ Right box ------------*/
+    .right-box {
+        padding: 40px 30px 40px 40px;
+    }
+
+    /*------------ Custom Placeholder ------------*/
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    .rounded-4 {
+        border-radius: 20px;
+    }
+
+    .rounded-5 {
+        border-radius: 30px;
+    }
+
+    .mi-boton-verde {
+        background-color: #1f5175; /* Cambia este valor al color que desees */
+        color: white; /* Cambia el color del texto si es necesario */
+    }
+    
+    /*------------ For small screens------------*/
+    @media only screen and (max-width: 768px) {
+        .box-area {
+            margin: 0 10px;
+        }
+
+        .left-box {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .right-box {
+            padding: 20px;
+        }
+    }

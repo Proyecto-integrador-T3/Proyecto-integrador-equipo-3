@@ -1,0 +1,50 @@
+/*----------------------------------------------------------------*/
+ /* Tercera Seccion    */    
+ p#negritas{
+    color: var(--color-dorado);
+    font-weight: bold;
+    text-align: center;
+}
+div#sabias-que{
+    background-image: url("/img/perrito-pug.jpg");
+    height: 100vh;
+    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
+    background-position: center; /* Centra la imagen en el div */
+    min-height: 100vh; /* Establece una altura mínima para el div */
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.contenedor-texto-sabias{
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+
+    height: 100%;
+    overflow: auto;
+    margin-right: 80px;
+    text-align: center;
+    margin: auto auto;
+    
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad para leer mejor el texto */
+    border-radius: 15px; /* Opcional para bordes redondeados */
+
+}
+.contenedor-texto-sabias > h1{
+    font-size: var(--tamaño-titulos);
+}
+.contenedor-texto-sabias > p{
+    text-align: left;
+    font-size: 34px;
+}
+
+#seccion-sabias{
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
