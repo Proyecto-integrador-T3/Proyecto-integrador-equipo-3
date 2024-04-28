@@ -1,0 +1,596 @@
+/* Creación de variables CSS */
+:root {
+    
+    --color-fondo-principal: #780000;
+    --color-iconos-redes: #C1121F;
+    --color-texto-barra-navegacion: #FDF0D5;
+    --color-fondo-barra-navegacion: #175676;
+    --color-fondo-paginas: #CCE6F4;
+    --color-dorado: #EDB33B;
+
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-titulos: "Poppins", sans-serif;
+
+    --tamaño-titulos: 85px;
+    --tamaño-subtitulos: 36px;
+    --tamaño-cuerpotexto: 30px;
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#paginabody{
+    background-color: var(--color-fondo-paginas);
+}
+
+#textoNavbar {
+    color: var(--color-texto-barra-navegacion);
+}
+
+/* Estilos de los iconos de la barra de navegación */
+.iconoGolden {
+    width: 150px;
+}
+
+.iconoNavbar {
+    width: 33px;
+    margin-right: 5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 104px;
+    transition: transform 0.5s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos del carrousel */
+.fs-1,
+.fs-4 {
+    font-family: poppins;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+/*Primera Seccion*/
+/*
+    Aplicamos propiedades grid-view para hacer respinsiva la pagina 
+*/
+
+
+.row::after {
+    content: "";
+    clear: both;    
+    display: table;
+    
+}
+    
+[class*="col-"] {
+    float: left;
+}
+    
+.col-1 {width: 8.33%;}
+
+.col-2 {width: 16.66%;}
+
+.col-3 {width: 25%;}
+
+.col-4 {width: 33.33%;}
+
+.col-5 {width: 41.66%;}
+
+.col-6 {width: 50%;}
+
+.col-7 {width: 58.33%;}
+
+.col-8 {width: 66.66%;}
+
+.col-9 {width: 75%;}
+
+.col-10 {width: 83.33%;}
+
+.col-11 {width: 91.66%;}
+
+.col-12 {width: 100%,
+    margin 0;}
+
+div.fondo1_perro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px auto;
+
+
+    background-image: url("../img/perro1.jpg");
+    height: 100vh;
+    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
+    background-position: center; /* Centra la imagen en el div */
+    min-height: 100vh; /* Establece una altura mínima para el div */
+    padding: 20px; /* Espacio dentro del div para los elementos internos */
+    
+}
+
+#columna-1{
+    
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+
+    overflow: auto;
+    margin-right: 300px;
+    margin-top: 50px;
+    height: 500px;
+    
+}
+#container-clm{
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    overflow: auto;
+    margin-left: 300px;
+    margin-top: 5 add0px;
+    height: 500px;
+}
+
+.button--acerca{
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 500px;
+    padding: 10px 20px; /* Añade un relleno interno para que el texto no esté justo en el borde */
+    background-color: #780000; /* El color de fondo rojo oscuro */
+    border: none; /* Remueve el borde predeterminado */
+    border-radius: 20px; /* Da bordes redondeados al botón */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
+    transition: background-color 0.3s ease;
+}
+.button--acerca:hover {
+    background-color: #9a0000; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.tituloprincipal{
+    grid-column: 1/3;
+
+    font-family: var(--fuente-titutlos);
+    color: var(--color-dorado);
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black, 0 0 10px black;  
+}
+.tituloprincipal >h1{
+    font-size: 70px;
+    height: 60px;
+}
+.titulo1{
+    color: var(--color-dorado);
+    font-family: var(--fuente-titutlos);
+    font-size: var(--tamaño-subtitulos);
+    text-align: left;   
+    color: black;
+}
+.texto1{
+    font-size: var(--tamaño-cuerpotexto);
+}
+
+/* Segunda Seccion */
+#servicios{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.animated-background-title {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 56%, 50%); /* Color de fondo inicial */
+    text-align: center;
+    border-radius: 20px;
+    transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+    width: 550px;
+    height: 80px;
+    margin: 20px auto;
+    font-size: 40px;
+    
+}
+
+.animated-background-title:hover {
+    background: linear-gradient(-45deg,  #FFB443, #7ACBCF,#F4F4F4 , hsl(204, 56%, 50%));
+    background-size: 400% 400%;
+    animation: changeColor 10s infinite;
+    
+    
+}
+h2#titulo-nuestros{
+    font-size: 15vw;
+}
+@keyframes changeColor {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+.services-content{
+    display: grid; /* Establece flexbox para el contenedor */
+    grid-template-columns: 1fr 1fr; /* Establece flexbox para el contenedor */
+    align-items: center; /* Alinea verticalmente los elementos hijos */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    gap: 20px;
+    height: 80vh;
+    margin-bottom: 30px;
+}
+.image-container{
+    display: flex;
+
+    width: 100%;
+    height: 500px;
+    
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    overflow: hidden;
+    animation: sway 2s ease-in-out infinite;
+}
+/* --*/
+.text-container{
+    max-width: 700px;
+    height: 700px;
+    overflow:auto;
+
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    margin-top: 80px;
+    
+    
+    
+     /* Color dorado para el fondo */
+    color: #000000; /* Texto en color negro */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: var(--tamaño-cuerpotexto);
+    text-align: center;
+    
+    
+}
+@keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+
+.commitment {
+    background-color: var(--color-fondo-barra-navegacion); /* Color azul marino para el fondo */
+    color: #ffffff; /* Texto en color blanco */
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Bordes redondeados inferiores */
+    width: 100%;
+
+    text-align: center;
+    }
+
+/*----------------------------------------------------------------*/
+ /* Tercera Seccion    */    
+p#negritas{
+    color: var(--color-dorado);
+    font-weight: bold;
+    text-align: center;
+}
+div#sabias-que{
+    background-image: url("/img/perrito-pug.jpg");
+    height: 100vh;
+    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
+    background-position: center; /* Centra la imagen en el div */
+    min-height: 100vh; /* Establece una altura mínima para el div */
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.contenedor-texto-sabias{
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+
+    height: 800px;
+    overflow: auto;
+    margin-right: 80px;
+    text-align: center;
+    margin: 20px auto;
+    
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad para leer mejor el texto */
+    border-radius: 15px; /* Opcional para bordes redondeados */
+
+}
+.contenedor-texto-sabias > h1{
+    font-size: var(--tamaño-titulos);
+}
+.contenedor-texto-sabias > p{
+    text-align: left;
+    font-size: 34px;
+}
+
+#seccion-sabias{
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+
+
+/*----------------------------------------------------------------*/
+ /* Cuarta Seccion    */  
+#seccion-servicios{
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+}
+ #contenedor-principal{
+    display: grid;
+    grid-template-columns: auto auto; /* Dos columnas, la izquierda más ancha que la derecha */
+
+    padding: 20px; /* Añade algo de espacio alrededor del contenedor */
+
+    margin: 50px;
+
+}
+#contenedor-principal >div{
+    background-color: #D9D9D9;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.bloque-adiestramientos{
+    height: 300px;
+    width: 700px;
+}
+
+.bloque-beneficios{
+    height: 300px;
+    width: 700px;
+}
+.bloque-llamado-accion{
+    grid-column: 1/3;
+    width: 700px;
+    height: 300px;
+    margin: 20px auto; 
+
+}
+.bloque-adiestramientos >h1{
+    color: var(--color-dorado);
+}
+.bloque-adiestramientos>ul {
+    margin: 20px 50px;
+}
+.bloque-beneficios > h1{
+    color: var(--color-dorado);
+}
+.bloque-beneficios > ul{
+    margin: 20px 50px;
+}
+.bloque-llamado-accion >h1{
+    color: var(--color-dorado); 
+}
+.bloque-llamado-accion > p{
+    margin: 20px 60px;
+}
+.button--agendar{
+    width: 200px;
+    padding: 10px 20px; /* Añade un relleno interno para que el texto no esté justo en el borde */
+    background-color: #780000; /* El color de fondo rojo oscuro */
+    border: none; /* Remueve el borde predeterminado */
+    border-radius: 20px; /* Da bordes redondeados al botón */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
+    transition: background-color 0.3s ease;
+}
+
+.button--agendar:hover {
+    background-color: #9a0000; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/*----------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    /* Esto se aplicará a pantallas con un ancho de 768px o menos */
+
+    /*
+    * Aplicando Media Queries para la primera seccion
+    */
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100%; /* Hace que todas las columnas ocupen el 100% del ancho */
+        margin: 0; /* Restablece cualquier margen que pueda afectar */
+    }
+
+    div.fondo1_perro {
+        grid-template-columns: 1fr; /* Coloca todo en una sola columna */
+        padding: 10px; /* Reduce el relleno para pantallas pequeñas */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto;
+    }
+
+    #columna-1, #container-clm {
+        margin-right: 0; /* Restablece los márgenes para que no empujen el contenido */
+        margin-left: 0;
+        margin-top: 50px; /* Espacio adicional en la parte superior si es necesario */
+        font-size: 12px;
+        height: auto; /* Altura automática para acomodar el contenido */
+        
+    }
+    #container-clm{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .button--acerca {
+        width: auto; /* Hace que el botón se ajuste al contenido */
+        padding: 10px; /* Ajuste del relleno para pantallas pequeñas */
+    }
+
+    .tituloprincipal, .tituloprincipal > h1 {
+        font-size: 40px; /* Reduce el tamaño del fuente para los títulos en pantallas pequeñas */
+        text-align: center; /* Centra el título */
+        height: auto; /* Altura automática para el título */
+    }
+
+    .titulo1 {
+        font-size: 24px; /* Reduce el tamaño del fuente para los subtítulos */
+    }
+
+    .texto1 {
+        font-size: 16px; /* Reduce el tamaño del fuente para el cuerpo del texto */
+    }
+
+    /*
+    * Aplicando Media Queries para la segunda seccion
+    */
+    #servicios{
+        height: 100vh;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        gap: 10px; /* Reduce el espacio entre elementos si es necesario */
+    }
+
+    .image-container {
+        height: 200px; /* Altura automática para adaptarse a la imagen */
+        margin-bottom: 20px; /* Añade un margen abajo de la imagen */
+    }
+
+    .image-container img {
+        width: 100%; /* Asegúrate de que la imagen se ajuste al ancho */
+        height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        object-position: center; /* Centra la imagen dentro del contenedor */
+    }
+
+    .text-container {
+        max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        margin-top: 0; /* Restablece los márgenes para alinearlo con el diseño */
+    }
+
+    .animated-background-title {
+        width: 100%; /* Ajusta el ancho al 100% */
+        height: auto; /* Altura automática para el título */
+        margin: 20px 0; /* Añade margen arriba y abajo */
+        font-size: 30px;
+    }
+
+    .commitment {
+        font-size: smaller; /* Ajusta el tamaño de fuente para dispositivos pequeños */
+    }
+    .golden-trainers{
+        margin: 20px 0 20px;
+        font-size: 29px;
+    }
+    /*
+    * Aplicando Media Queries para la tercera seccion
+    */
+    div#sabias-que {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-rows: auto 1fr; /* Agrega dos filas, una para el texto y otra para el espacio extra */
+        background-position: right ; /* Ajusta esta posición según dónde esté el perro en tu imagen */
+    }
+
+    .contenedor-texto-sabias {
+        /* Asegúrate de que ocupe la primera fila de la grilla */
+        grid-row: 1;
+        margin-right: 0; /* Elimina el margen derecho para que el texto no se desplace */
+        height: auto; /* Ajusta la altura automáticamente al contenido */
+        overflow: visible; /* Cambia a visible si el desbordamiento de texto no es un problema */
+        padding: 20px 0; /* Añade algo de relleno en la parte superior e inferior */
+    }
+
+    /* Ajustes adicionales para centrar el texto y reducir el tamaño de fuente si es necesario */
+    .contenedor-texto-sabias > h1, 
+    .contenedor-texto-sabias > p {
+        text-align: center;
+        font-size: 24px; /* Ajusta el tamaño de fuente según necesites */
+    }
+    
+    /* Si necesitas ajustar la altura del div para la imagen de fondo, puedes hacerlo aquí */
+    #seccion-sabias {
+        height: auto;
+        padding-bottom: 20px; /* Agrega un relleno en la parte inferior si es necesario */
+    }
+    .titulo-sabias > p {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); /* Incrementa el desenfoque y opacidad para una mayor legibilidad */
+        color: black;
+    }
+    .contenedor-texto-sabias {
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad para leer mejor el texto */
+        border-radius: 15px; /* Opcional para bordes redondeados */
+        padding: 20px; /* Agrega un poco más de espacio alrededor del texto */
+    }
+
+    /*
+    * Aplicando Media Queries para la cuarta seccion
+    */
+    #contenedor-principal {
+        grid-template-columns: 1fr; /* Una sola columna para dispositivos móviles */
+        margin: 20px; /* Margen reducido para dispositivos móviles */
+      }
+    
+      .bloque-adiestramientos,
+      .bloque-beneficios,
+      .bloque-llamado-accion {
+        width: 100%; /* Ancho completo para adaptarse al contenedor */
+        height: auto; /* Altura automática para ajustarse al contenido */
+        margin: 10px 0; /* Margen superior e inferior para separar los bloques */
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Sombra más sutil para dispositivos móviles */
+      }
+    
+      .bloque-llamado-accion {
+        grid-column: 1; /* Asegura que ocupe la columna completa */
+      }
+    
+      .button--agendar {
+        margin: 20px auto; /* Centra el botón en dispositivos móviles */
+      }
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        transition: none;
+        /* Anula la transición en dispositivos pequeños */
+    }
+
+    .iconoNavbar {
+        width: 16px;
+        /* Tamaño de iconos más pequeño para dispositivos pequeños */
+        margin-right: 8px;
+    }
+
+    .carousel-caption {
+        display: none;
+    }
+}
