@@ -5,8 +5,12 @@
     justify-self: end;
     
 }
-footer
-.footer{
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
     display: flex;
     /*Flex usando margin auto*/
     flex-direction: column;
@@ -14,7 +18,7 @@ footer
     /* min-height: 100vh; */
     /*Con esto el body llega hasta la parte inferior*/
     margin-top: auto;
-    margin-bottom: 0;
+    
 }
 
 .links {
