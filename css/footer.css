@@ -5,7 +5,7 @@
     justify-self: end;
     
 }
-
+footer
 .footer{
     display: flex;
     /*Flex usando margin auto*/
@@ -13,6 +13,8 @@
     /*Es necesario para que al usar flex no se desbarate*/
     /* min-height: 100vh; */
     /*Con esto el body llega hasta la parte inferior*/
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .links {
