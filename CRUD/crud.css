@@ -1,14 +1,38 @@
+/*
+* Importaciones de Hojas de Estilos Externas
+*/
+@import url(./primeraseccion.css);
+@import url(./segundaseccion.css);
+@import url(./terceraseccion.css);
+@import url(./cuartaseccion.css);
+@import url(./MediaQueries_Index.css);
+
+
 /* Creación de variables CSS */
 :root {
+    
     --color-fondo-principal: #780000;
     --color-iconos-redes: #C1121F;
     --color-texto-barra-navegacion: #FDF0D5;
     --color-fondo-barra-navegacion: #175676;
     --color-fondo-paginas: #CCE6F4;
+    --color-dorado: #EDB33B;
+
     --fuente-principal: 'Roboto', sans-serif;
+    --fuente-titulos: "Poppins", sans-serif;
+
+    --tamaño-titulos: 85px;
+    --tamaño-subtitulos: 36px;
+    --tamaño-cuerpotexto: 30px;
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#paginabody {
+#paginabody{
     background-color: var(--color-fondo-paginas);
 }
 
@@ -26,10 +50,19 @@
     margin-right: 5px;
 }
 
+/* Alineación de la barra de navegación */
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Ajuste de los elementos individuales */
 .nav-item {
+    flex: 1;
     display: flex;
     align-items: center;
-    margin-left: 104px;
+    margin-left: 0px;
     transition: transform 0.5s ease;
 }
 
@@ -38,7 +71,32 @@
 }
 
 
+.navbar{
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+}
 
+.bg{
+    background-image: url(../img/PerroLogin.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.login{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+#login{
+    font-family: var(--fuente-titulos);
+}
+#botonIniciarSesion{
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-barra-navegacion);
+}
 @media (max-width: 768px) {
     .nav-item {
         transition: none;
@@ -51,46 +109,8 @@
         margin-right: 8px;
     }
 
-    /*------------ Login container ------------*/
-    .box-area {
-        width: 930px;
+    .carousel-caption {
+        display: none;
     }
+}
 
-    /*------------ Right box ------------*/
-    .right-box {
-        padding: 40px 30px 40px 40px;
-    }
-
-    /*------------ Custom Placeholder ------------*/
-    ::placeholder {
-        font-size: 16px;
-    }
-
-    .rounded-4 {
-        border-radius: 20px;
-    }
-
-    .rounded-5 {
-        border-radius: 30px;
-    }
-
-    .mi-boton-verde {
-        background-color: #1f5175; /* Cambia este valor al color que desees */
-        color: white; /* Cambia el color del texto si es necesario */
-    }
-    
-    /*------------ For small screens------------*/
-    @media only screen and (max-width: 768px) {
-        .box-area {
-            margin: 0 10px;
-        }
-
-        .left-box {
-            height: 100px;
-            overflow: hidden;
-        }
-
-        .right-box {
-            padding: 20px;
-        }
-    }

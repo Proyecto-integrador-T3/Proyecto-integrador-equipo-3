@@ -10,18 +10,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/CRUD/crud.css">
+    <link rel="stylesheet" href="./crud.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body id="paginabody">
     <header>
-        <!-- Inicio de la navbar -->
+        <!--Inicio de navbar-->
         <nav class="navbar navbar-expand-lg" style="background-color: var(--color-fondo-barra-navegacion);">
             <div class="container">
                 <div>
-                    <a class="navbar-brand" href="#" style="color: goldenrod;">
+                    <a class="navbar-brand" href="./index.html" style="color: goldenrod;">
                         <img src="/img/iconoMarca.svg" alt="Icono barra de navegación" class="iconoGolden">
                     </a>
                 </div>
@@ -34,22 +34,23 @@
                     <div class="navbar-nav">
                         <div class="nav-item">
                             <img src="/img/iconoContacto.svg" alt="Icono de contacto" class="iconoNavbar">
-                            <a class="nav-link active" aria-current="page" href="#"
+                            <a class="nav-link active" aria-current="page" href="./html/contacto.html"
                                 style="color: var(--color-texto-barra-navegacion);">Contáctanos</a>
                         </div>
                         <div class="nav-item">
                             <img src="/img/iconoUsuarios.svg" alt="Icono barra de navegación" class="iconoNavbar">
-                            <a class="nav-link" href="#" style="color: var(--color-texto-barra-navegacion);">Acerca de
+                            <a class="nav-link" href="./html/acercaDeNosotros.html"
+                                style="color: var(--color-texto-barra-navegacion);">Acerca de
                                 nosotros</a>
                         </div>
                         <div class="nav-item">
                             <img src="/img/iconoCatalogo.svg" alt="Icono barra de navegación" class="iconoNavbar">
-                            <a class="nav-link" href="#"
+                            <a class="nav-link" href="./html/Catalogo.html"
                                 style="color: var(--color-texto-barra-navegacion);">Catálogo</a>
                         </div>
                         <div class="nav-item">
                             <img src="/img/iconoUsuario.svg" alt="Icono barra de navegación" class="iconoNavbar">
-                            <a class="nav-link" href="#" style="color: var(--color-texto-barra-navegacion);">Iniciar
+                            <a class="nav-link" href="" style="color: var(--color-texto-barra-navegacion);">Iniciar
                                 sesión Registrarse</a>
                         </div>
                     </div>
@@ -57,61 +58,51 @@
             </div>
         </nav>
     </header>
-    <main>
-                <!----------------------- Main Container -------------------------->
-                <div class="container d-flex justify-content-center align-items-center min-vh-100">
-                    <!----------------------- Login Container -------------------------->
-                    <div class="row border rounded-5 p-3 bg-white shadow box-area">
-                        <!--------------------------- Left Box ----------------------------->
-                        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-                            style="background: #FDF0D5;">
-                            <div class="featured-image mb-3">
-                                <img src="/img/happyDog.svg" class="img-fluid" style="width: 800px;">
-                            </div>
-                        </div>
-                        <!-------------------- ------ Right Box ---------------------------->
+    <!--Fin de navbar-->
+    <div class="container LOGIN w-75 mt-5 mb-5 rounded shadow" id="login">
+        <div class="row align-items-stretch ">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start">
+            </div>
+            <div class="col bg-white rounded-end p-5">
+                <div class="text-center">
+                    <img src="/img/arrow-up-right-circle-fill.svg" width="48" alt="">
+                </div>
+                <h2 class="fw-bold text-center pt-5 mb-5">INICIA SESIÓN</h2>
 
-                        <div class="col-md-6 right-box">
-                            <div class="row align-items-center">
-                                <div class="header-text mb-4">
-                                    <h2>Hola de nuevo</h2>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control form-control-lg bg-light fs-6"
-                                        placeholder="Correo electronico">
-                                </div>
-                                <div class="input-group mb-1">
-                                    <input type="password" class="form-control form-control-lg bg-light fs-6"
-                                        placeholder="Contraseña">
-                                </div>
-                                <div class="input-group mb-5 d-flex justify-content-between">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="formCheck">
-                                        <label for="formCheck" class="form-check-label text-secondary"><small>Recuerdame</small></label>
-                                    </div>
-                                    <div class="forgot">
-                                        <small><a href="#">¿Olvidaste tu contraseña?</a></small>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <button class="btn btn-lg mi-boton-verde w-100 fs-6">Inicia sesión</button>
-                                </div>
-                            </div>
+                <!-- LOGIN -->
+                <form action="">
+                    <div class="mb-4 position-relative">
+                        <label for="email" class="form-label">Correo</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><img src="../img/person-fill.svg" alt="iconoUsuario"></span>
+                            <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="mb-4 position-relative">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
+                            <input type="password" class="form-control" name="password" placeholder="Ingresa tu contraseña">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" name="connected" class="form-check-input">
+                        <label for="connected" class="form-check-label">Mantenerme conectado</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn" id="botonIniciarSesion">Iniciar sesión</button>
+                    </div>
+                    <div class="my-3">
+                        <span>No tienes cuenta <a href="">Registrarse</a></span>
+                        <br>
+                        <span><a href="">Recuperar password</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    </main>
-
-    
-    <footer>
-
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script src="bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

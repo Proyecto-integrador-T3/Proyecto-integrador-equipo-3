@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <!-- Enlace a Bootstrap para estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-....." crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de Productos</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="productForm">
+                    <div class="mb-3">
+                        <label for="nombre">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio">Precio del Producto</label>
+                        <input type="number" class="form-control" id="precio" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion">Descripción del Producto</label>
+                        <textarea class="form-control" id="descripcion" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div id="productList" class="row">
+            <!-- Aquí se mostrarán los productos -->
+        </div>
+    </div>
+
+    <script>
+        // Array para almacenar los productos
+        let productos = JSON.parse(localStorage.getItem("productos")) || [];
+
+        // Función para agregar un producto
+        function agregarProducto(event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const precio = document.getElementById("precio").value;
+            const descripcion = document.getElementById("descripcion").value;
+            const nuevoProducto = {
+                id: productos.length + 1,
+                nombre: nombre,
+                precio: precio,
+                descripcion: descripcion
+            };
+            productos.push(nuevoProducto);
+            guardarProductos();
+            mostrarProductos();
+            // Limpiar el formulario después de agregar el producto
+            document.getElementById("productForm").reset();
+        }
+
+        // Función para eliminar un producto
+        function eliminarProducto(id) {
+            productos = productos.filter(producto => producto.id !== id);
+            guardarProductos();
+            mostrarProductos();
+        }
+
+        // Función para guardar los productos en el almacenamiento local
+        function guardarProductos() {
+            localStorage.setItem("productos", JSON.stringify(productos));
+        }
+
+        // Función para mostrar los productos en la página
+        function mostrarProductos() {
+            const productListDiv = document.getElementById("productList");
+            productListDiv.innerHTML = "";
+            productos.forEach(producto => {
+                const productoHTML = `
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">Precio: $${producto.precio}</p>
+                <p class="card-text">${producto.descripcion}</p>
+                <button onclick="eliminarProducto(${producto.id})" class="btn btn-danger">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        `;
+                productListDiv.innerHTML += productoHTML;
+            });
+        }
+
+        // Al cargar la página, mostramos los productos
+        window.onload = function () {
+            mostrarProductos();
+        };
+    </script>
+</body>
+
+</html>
