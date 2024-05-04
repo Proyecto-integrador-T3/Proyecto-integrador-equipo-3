@@ -16,7 +16,7 @@
 
 }
 #idbody{
-    font-family: var(--fuente-titulos)
+    font-family: var(--fuente-principal);
 }
 
 #productCards{
@@ -26,12 +26,25 @@
     padding: 1rem;
 }
 
-#tituloPrincipal{
-    font-size:var(--tamaño-subtitulos);
-    color:var(--color-fondo-barra-navegacion);
+#productForm {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border: solid 1px var(--color-fondo-barra-navegacion);
+    border-radius: 13px;
+    font-family: var(--fuente-titulos);
+    transition: all 0.5s;
+
 }
-#tituloPrincipal:hover {
+#productForm:hover {
     box-shadow: 5px 5px var(--color-fondo-barra-navegacion), 11px 11px var(--color-fondo-barra-navegacion), 7px 7px var(--color-fondo-barra-navegacion);
-    transform: translateX(-3px);;
-    transition: 2s;
-    }
+    transform: translateX(-3px);
+    transition: 1s;
+}
+#btn-guardar{
+    background-color: var(--color-fondo-barra-navegacion);
+}
+#btn-guardar:hover{
+    background-color: var(--color-fondo-paginas);
+    color: var(--color-fondo-barra-navegacion)
+}
