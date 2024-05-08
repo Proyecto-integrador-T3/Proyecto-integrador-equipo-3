@@ -1,13 +1,3 @@
-/*
-* Importaciones de Hojas de Estilos Externas
-*/
-@import url(./primeraseccion.css);
-@import url(./segundaseccion.css);
-@import url(./terceraseccion.css);
-@import url(./cuartaseccion.css);
-@import url(./MediaQueries_Index.css);
-
-
 /* Creación de variables CSS */
 :root {
     

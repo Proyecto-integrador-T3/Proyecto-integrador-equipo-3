@@ -5,11 +5,7 @@
     justify-self: end;
     
 }
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+
 footer{
     display: flex;
     /*Flex usando margin auto*/
