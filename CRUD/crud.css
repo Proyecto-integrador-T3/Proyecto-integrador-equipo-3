@@ -68,8 +68,8 @@
 }
 
 .bg{
-    background-image: url(../img/PerroLogin.jpg);
-    background-position: center center;
+    background-image: url(../img/dogTrainer.jpg);
+    background-position: left;
     background-size: cover;
 }
 

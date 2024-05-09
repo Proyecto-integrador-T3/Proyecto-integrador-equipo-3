@@ -71,22 +71,32 @@
 
                 <!-- LOGIN -->
                 <form action="">
-                    
+
                     <!--Input Nombre completo-->
                     <div class="mb-4 position-relative">
                         <label for="text" class="form-label">Nombre Completo</label>
                         <div class="input-group">
-                            <span class="input-group-text"><img src="../img/person-fill.svg" alt="iconoNombreCompleto"></span><!--Cambiar icono por icono de email-->
-                            <input type="text" class="form-control" name="fullName" placeholder="Ingresa tu Nombre Completo">
+                            <span class="input-group-text"><img src="../img/person-fill.svg"
+                                    alt="iconoNombreCompleto"></span><!--Cambiar icono por icono de email-->
+                            <input type="text" class="form-control" name="fullName"
+                                placeholder="Ingresa tu Nombre Completo">
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="fullNameAlert" role="alert">
+                            El nombre completo no puede estar vacio.
                         </div>
                     </div>
-                    
+
                     <!--Input Número de teléfono-->
                     <div class="mb-4 position-relative">
                         <label for="tel" class="form-label">Número de teléfono</label>
                         <div class="input-group">
-                            <span class="input-group-text"><img src="../img/iconoContacto.svg" alt="iconoTelefono"></span><!--Cambiar icono por icono de telefono-->
-                            <input type="tel" class="form-control" maxlength="10" minlength="10" name="cellNumber" placeholder="Ingresa tu Número de teléfono">
+                            <span class="input-group-text"><img src="../img/contact_phone.svg"
+                                    alt="iconoTelefono"></span><!--Cambiar icono por icono de telefono-->
+                            <input type="tel" class="form-control" maxlength="10" minlength="10" name="cellNumber"
+                                placeholder="Ingresa tu Número de teléfono">
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="cellNumberAlert" role="alert">
+                            Por favor ingresa un número de telefono valido.
                         </div>
                     </div>
 
@@ -94,17 +104,29 @@
                     <div class="mb-4 position-relative">
                         <label for="email" class="form-label">Correo</label>
                         <div class="input-group">
-                            <span class="input-group-text"><img src="../img/person-fill.svg" alt="iconoCorreo"></span>
+                            <span class="input-group-text"><img src="../img/mail.svg" alt="iconoCorreo"></span>
                             <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
+                            <br>
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="emailAlert" role="alert">
+                            Por favor ingresa un correo valido.
                         </div>
                     </div>
-                    
+
                     <!--Input Contraseña-->
                     <div class="mb-4 position-relative">
                         <label for="password" class="form-label">Contraseña</label>
                         <div class="input-group">
                             <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
-                            <input type="password" class="form-control" name="password" placeholder="Ingresa tu contraseña">
+                            <input type="password" class="form-control" name="password"
+                                placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="passwordAlert" role="alert">
+                            "La contraseña debe tener al menos 8 caracteres."
+                            <br>
+                            "La contraseña debe contener al menos una letra mayúscula."
+                            <br>
+                            "La contraseña debe contener al menos un signo de puntuación o carácter especial."
                         </div>
                     </div>
                     <!--Input Repetir Contraseña-->
@@ -112,17 +134,25 @@
                         <label for="password" class="form-label">Vuelve a introducir tu contraseña</label>
                         <div class="input-group">
                             <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
-                            <input type="password" class="form-control" name="passwordValidate" placeholder="Vuelve a introducir tu contraseña">
+                            <input type="password" class="form-control" name="passwordValidate"
+                                placeholder="Vuelve a introducir tu contraseña">
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="passwordWrongAlert" role="alert">
+                            "Las contraseñas no coinciden."
                         </div>
                     </div>
                     <!--Boton registrarse-->
-                    <div class="d-grid">
+                    <div class="d-grid pt-1">
                         <button type="submit" class="btn" id="botonRegistrarse">Registrarse</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <script src="bootstrap.bundle.min.js"></script>
+        <script src="../js/registroUsuarios.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
