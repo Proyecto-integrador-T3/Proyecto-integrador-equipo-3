@@ -1,6 +1,16 @@
+/*
+* Importaciones de Hojas de Estilos Externas
+*/
+@import url(./primeraseccion.css);
+@import url(./segundaseccion.css);
+@import url(./terceraseccion.css);
+@import url(./cuartaseccion.css);
+@import url(./MediaQueries_Index.css);
+
+
 /* Creación de variables CSS */
 :root {
-    
+
     --color-fondo-principal: #780000;
     --color-iconos-redes: #C1121F;
     --color-texto-barra-navegacion: #FDF0D5;
@@ -16,13 +26,16 @@
     --tamaño-cuerpotexto: 30px;
 
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-#paginabody{
+#paginabody {
     background-color: var(--color-fondo-paginas);
 }
 
@@ -61,32 +74,49 @@
 }
 
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    width: 100%;
+    /* Asegura que el contenedor use todo el ancho disponible */
 }
 
-.bg{
-    background-image: url(../img/dogTrainer.jpg);
-    background-position: left;
+.bg {
+    background-image: url(../img/PerroLogin.jpg);
+    background-position: center center;
     background-size: cover;
 }
 
 
-.login{
+.login {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     margin-top: 100px;
 }
-#login{
+
+#login {
     font-family: var(--fuente-titulos);
 }
-#botonIniciarSesion{
+
+#botonRegistrarse {
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-barra-navegacion);
 }
+
+#successText {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto-barra-navegacion);
+    font-size: large;
+    text-align: center;
+    border: 3px solid var(--color-texto-barra-navegacion);
+    border-radius: 15px;
+    padding: 29px;
+    background-color: var(--color-fondo-principal);
+
+}
+
 @media (max-width: 768px) {
     .nav-item {
         transition: none;
@@ -103,4 +133,3 @@
         display: none;
     }
 }
-
