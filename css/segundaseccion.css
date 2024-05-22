@@ -1,11 +1,30 @@
 /* Segunda Seccion */
 #servicios{
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     padding: 20px;
+    display: block;
+}
+#containr-sd{
+    height: 680px;
+   
+}
+#columna-1{
+    display: flex;
+    height: 100%;
+   
+    
+    justify-content: center;
+    align-items: center;
+
+}
+#columna-2{
+    height: 100%;
+    
+    overflow: hidden;
 }
 
-.animated-background-title {
-    
+.animated-background-title { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +34,8 @@
     transition: background-color 0.5s ease; /* Transición suave del color de fondo */
     width: 550px;
     height: 80px;
-    margin: 20px auto;
+    margin: auto;
     font-size: 40px;
-    
 }
 
 .animated-background-title:hover {
@@ -38,28 +56,26 @@ h2#titulo-nuestros{
 
 
 .services-content{
-    display: grid; /* Establece flexbox para el contenedor */
-    grid-template-columns: 1fr 1fr; /* Establece flexbox para el contenedor */
-    align-items: center; /* Alinea verticalmente los elementos hijos */
-    justify-content: center; /* Centra los elementos hijos horizontalmente */
-    gap: 20px;
-    height: 80vh;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    height: auto; /* Altura automática para adaptarse al contenido */
+    gap: 10px; /* Reduce el espacio entre elementos si es necesario */
 }
 .image-container{
-    display: flex;
-
-    width: 100%;
-    height: 500px;
     
+
+    height: 400px; /* Altura automática para adaptarse a la imagen */
+    margin-bottom: 20px; /* Añade un margen abajo de la imagen */
 }
 .image-container img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 
-    overflow: hidden;
+    width: 100%; /* Asegúrate de que la imagen se ajuste al ancho */
+    height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+    
+    align-items: center;
+
     animation: sway 2s ease-in-out infinite;
+    
 }
 /* --*/
 .text-container{
@@ -100,3 +116,7 @@ h2#titulo-nuestros{
 
     text-align: center;
     }
+
+
+
+/*----------------------------------------------------------------*/

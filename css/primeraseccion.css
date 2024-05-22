@@ -3,121 +3,40 @@
     Aplicamos propiedades grid-view para hacer respinsiva la pagina 
 */
 
-
-.row::after {
-    content: "";
-    clear: both;    
-    display: table;
-    
-}
-    
-[class*="col-"] {
-    float: left;
-}
-    
-.col-1 {width: 8.33%;}
-
-.col-2 {width: 16.66%;}
-
-.col-3 {width: 25%;}
-
-.col-4 {width: 33.33%;}
-
-.col-5 {width: 41.66%;}
-
-.col-6 {width: 50%;}
-
-.col-7 {width: 58.33%;}
-
-.col-8 {width: 66.66%;}
-
-.col-9 {width: 75%;}
-
-.col-10 {width: 83.33%;}
-
-.col-11 {width: 91.66%;}
-
-.col-12 {width: 100%,
-    margin 0;}
-
-div.fondo1_perro{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px auto;
-
-
-    background-image: url("../img/perro1.jpg");
-    height: 100vh;
-    background-size: cover; /* Cubre completamente el div ajustando la imagen según sea necesario */
-    background-position: center; /* Centra la imagen en el div */
-    min-height: 100vh; /* Establece una altura mínima para el div */
-    
+/* =================================================================*/
+#primeraseccion{
+    overflow: hidden;
 }
 
-#columna-1{
-    
-    display: flex;
-    justify-self: flex-start;
-    flex-direction: column;
-
-    overflow: auto;
-    margin-right: 300px;
-    margin-top: 0px;
-    height: 500px;
-    
-}
-#container-clm{
-    display: flex;
-    justify-self: flex-end;
-    flex-direction: column;
-    overflow: auto;
-    margin-left: 300px;
-    margin-top: 5 add0px;
-    height: 500px;
+.card-img{
+    overflow: hidden;
 }
 
-.button--acerca{
-    width: 200px;
-    margin-top: 20px;
-    margin-left: 500px;
-    padding: 10px 20px; /* Añade un relleno interno para que el texto no esté justo en el borde */
-    background-color: #780000; /* El color de fondo rojo oscuro */
-    border: none; /* Remueve el borde predeterminado */
-    border-radius: 20px; /* Da bordes redondeados al botón */
-    color: white; /* Color del texto */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Grosor del texto */
-    text-transform: uppercase; /* Transforma el texto a mayúsculas */
-    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
-    transition: background-color 0.3s ease;
-}
-.button--acerca:hover {
-    background-color: #9a0000; /* Cambia el color de fondo al pasar el mouse por encima */
-}
-
-.tituloprincipal{
-    grid-column: 1/3;
-
+#tituloPP {
     font-family: var(--fuente-titutlos);
     color: var(--color-dorado);
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
     text-shadow: 1px 1px 1px black, 0 0 10px black;  
-    height: 100%;
+    
 }
-.tituloprincipal >h1{
-    font-size: 70px;
-    height: 60px;
-}
-.titulo1{
+#texto1p {
     color: var(--color-dorado);
     font-family: var(--fuente-titutlos);
-    font-size: var(--tamaño-subtitulos);
+    font-size: 28px;
     text-align: left;   
     color: black;
-}
-.texto1{
-    font-size: var(--tamaño-cuerpotexto);
 
+    padding-top: 40px;
+    padding-right:200px;
+    max-height: 380px;
+    overflow: hidden;
+}
+#texto2p {
+    font-family: var(--fuente-titutlos);
+    font-size: 28px;
+    color: black;
+
+    padding-top: 30px;
+    padding-left:200px;
 }
