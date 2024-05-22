@@ -117,6 +117,7 @@
 
 }
 
+
 @media (max-width: 768px) {
     .nav-item {
         transition: none;
@@ -131,5 +132,8 @@
 
     .carousel-caption {
         display: none;
+    }
+    #successDog {
+        width: 50%;
     }
 }
