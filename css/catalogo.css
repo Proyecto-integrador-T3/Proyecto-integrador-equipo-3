@@ -1,0 +1,37 @@
+:root {
+    
+    --color-fondo-principal: #780000;
+    --color-iconos-redes: #C1121F;
+    --color-texto-barra-navegacion: #FDF0D5;
+    --color-fondo-barra-navegacion: #175676;
+    --color-fondo-paginas: #CCE6F4;
+    --color-dorado: #EDB33B;
+
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-titulos: "Poppins", sans-serif;
+
+    --tamaño-titulos: 85px;
+    --tamaño-subtitulos: 36px;
+    --tamaño-cuerpotexto: 30px;
+
+}
+#idbody{
+    font-family: var(--fuente-titulos)
+}
+
+#productCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#tituloPrincipal{
+    font-size:var(--tamaño-subtitulos);
+    color:var(--color-fondo-barra-navegacion);
+}
+#tituloPrincipal:hover {
+    box-shadow: 5px 5px var(--color-fondo-barra-navegacion), 11px 11px var(--color-fondo-barra-navegacion), 7px 7px var(--color-fondo-barra-navegacion);
+    transform: translateX(-3px);;
+    transition: 2s;
+    }
