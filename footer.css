@@ -1,0 +1,54 @@
+.container-redes__social {
+    color: rgb(0, 0, 0);
+    grid-area: b;
+    align-content: center;
+    justify-self: end;
+}
+
+.links {
+    color: black;
+}
+
+.icon {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.final-container {
+    color: #fff;
+    background-color: #780000;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-logo {
+    width: 10px;
+}
+
+.container-redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "a b";
+}
+
+
+body {
+    display: flex;
+    /*Flex usando margin auto*/
+    flex-direction: column;
+    /*Es necesario para que al usar flex no se desbarate*/
+    min-height: 100vh;
+    /*Con esto el body llega hasta la parte inferior*/
+
+}
+
+.footer {
+    padding: 0.5em 0;
+    /*Separa un poco el footer de lo demás*/
+    text-align: center;
+    /*Creo que no es indispensable pues ya centré cada div del footer*/
+    margin-top: auto;
+    /*a propiedad margin-top establece el margen superior de un elemento especificando una longitud o un porcentaje. Los valores en porcentaje se refieren al ancho del elemento padre. Se permiten márgenes negativos.*/
+
+}
