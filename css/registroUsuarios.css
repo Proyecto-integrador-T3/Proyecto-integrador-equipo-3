@@ -10,7 +10,7 @@
 
 /* Creación de variables CSS */
 :root {
-    
+
     --color-fondo-principal: #780000;
     --color-iconos-redes: #C1121F;
     --color-texto-barra-navegacion: #FDF0D5;
@@ -26,13 +26,16 @@
     --tamaño-cuerpotexto: 30px;
 
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-#paginabody{
+#paginabody {
     background-color: var(--color-fondo-paginas);
 }
 
@@ -63,36 +66,63 @@
     display: flex;
     align-items: center;
     margin-left: 0px;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .nav-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
 }
 
-/* Estilos del carrousel */
-.fs-1,
-.fs-4 {
-    font-family: poppins;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 
-}
-
-.navbar{
+.navbar {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    width: 100%;
+    /* Asegura que el contenedor use todo el ancho disponible */
+}
+
+.bg {
+    background-image: url(../img/PerroLogin.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 
 
+.login {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+#login {
+    font-family: var(--fuente-titulos);
+}
+
+#botonRegistrarse {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-barra-navegacion);
+}
+
+#successText {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto-barra-navegacion);
+    font-size: large;
+    text-align: center;
+    border: 3px solid var(--color-texto-barra-navegacion);
+    border-radius: 15px;
+    padding: 29px;
+    background-color: var(--color-fondo-principal);
+
+}
 
 
 @media (max-width: 768px) {
-    .nav-item:hover {
-        transform: scale(1);
-        opacity: 0.8;
+    .nav-item {
+        transition: none;
+        /* Anula la transición en dispositivos pequeños */
     }
-    
 
     .iconoNavbar {
         width: 16px;
@@ -102,5 +132,8 @@
 
     .carousel-caption {
         display: none;
+    }
+    #successDog {
+        width: 50%;
     }
 }

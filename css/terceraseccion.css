@@ -1,0 +1,11 @@
+/*----------------------------------------------------------------*/
+ /* Tercera Seccion    */    
+
+.columna-texto{
+    text-align: left;
+    font-size: 23px;
+    color: black;
+
+    overflow: hidden;
+    height: 600px;
+}

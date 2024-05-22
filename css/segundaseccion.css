@@ -1,0 +1,122 @@
+/* Segunda Seccion */
+#servicios{
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    display: block;
+}
+#containr-sd{
+    height: 680px;
+   
+}
+#columna-1{
+    display: flex;
+    height: 100%;
+   
+    
+    justify-content: center;
+    align-items: center;
+
+}
+#columna-2{
+    height: 100%;
+    
+    overflow: hidden;
+}
+
+.animated-background-title { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 56%, 50%); /* Color de fondo inicial */
+    text-align: center;
+    border-radius: 20px;
+    transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+    width: 550px;
+    height: 80px;
+    margin: auto;
+    font-size: 40px;
+}
+
+.animated-background-title:hover {
+    background: linear-gradient(-45deg,  #FFB443, #7ACBCF,#F4F4F4 , hsl(204, 56%, 50%));
+    background-size: 400% 400%;
+    animation: changeColor 10s infinite;
+    
+    
+}
+h2#titulo-nuestros{
+    font-size: 15vw;
+}
+@keyframes changeColor {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+.services-content{
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    height: auto; /* Altura automática para adaptarse al contenido */
+    gap: 10px; /* Reduce el espacio entre elementos si es necesario */
+}
+.image-container{
+    
+
+    height: 400px; /* Altura automática para adaptarse a la imagen */
+    margin-bottom: 20px; /* Añade un margen abajo de la imagen */
+}
+.image-container img{
+
+    width: 100%; /* Asegúrate de que la imagen se ajuste al ancho */
+    height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+    
+    align-items: center;
+
+    animation: sway 2s ease-in-out infinite;
+    
+}
+/* --*/
+.text-container{
+    max-width: 700px;
+    height: 700px;
+    overflow:auto;
+
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    margin-top: 80px;
+    
+    
+    
+     /* Color dorado para el fondo */
+    color: #000000; /* Texto en color negro */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: var(--tamaño-cuerpotexto);
+    text-align: center;
+    
+    
+}
+@keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+
+.commitment {
+    background-color: var(--color-fondo-barra-navegacion); /* Color azul marino para el fondo */
+    color: #ffffff; /* Texto en color blanco */
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Bordes redondeados inferiores */
+    width: 100%;
+
+    text-align: center;
+    }
+
+
+
+/*----------------------------------------------------------------*/

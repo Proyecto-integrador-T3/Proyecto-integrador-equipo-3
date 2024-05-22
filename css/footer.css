@@ -6,13 +6,15 @@
     
 }
 
-.footer{
+footer{
     display: flex;
     /*Flex usando margin auto*/
     flex-direction: column;
     /*Es necesario para que al usar flex no se desbarate*/
     /* min-height: 100vh; */
     /*Con esto el body llega hasta la parte inferior*/
+    margin-top: auto;
+    
 }
 
 .links {
@@ -27,11 +29,10 @@
 .final-container {
     color: #fff;
     background-color: #780000;
-    text-align: center;
     padding: 10px;
     grid-area: b;
     align-content: center;
-    justify-content: start;
+    
 }
 
 .container-logo {
@@ -40,15 +41,25 @@
     justify-items: start;
 }
 
-.container-redes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "a b c";
+@media only screen and (min-width: 768px){
+    .container-redes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a b c";
+            text-align: left;
+    }
+    
+} 
+
+@media only screen and (max-width: 768px){
+ .final-container{
+    text-align: center;
+ }
 }
 
 .footer {
-    padding: 0.5em 0;
+    padding-top: 0.5em ;
     /*Separa un poco el footer de lo demás*/
     text-align: center;
     /*Creo que no es indispensable pues ya centré cada div del footer*/

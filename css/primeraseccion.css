@@ -1,0 +1,42 @@
+/*Primera Seccion*/
+/*
+    Aplicamos propiedades grid-view para hacer respinsiva la pagina 
+*/
+
+/* =================================================================*/
+#primeraseccion{
+    overflow: hidden;
+}
+
+.card-img{
+    overflow: hidden;
+}
+
+#tituloPP {
+    font-family: var(--fuente-titutlos);
+    color: var(--color-dorado);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black, 0 0 10px black;  
+    
+}
+#texto1p {
+    color: var(--color-dorado);
+    font-family: var(--fuente-titutlos);
+    font-size: 28px;
+    text-align: left;   
+    color: black;
+
+    padding-top: 40px;
+    padding-right:200px;
+    max-height: 380px;
+    overflow: hidden;
+}
+#texto2p {
+    font-family: var(--fuente-titutlos);
+    font-size: 28px;
+    color: black;
+
+    padding-top: 30px;
+    padding-left:200px;
+}
