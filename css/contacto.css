@@ -127,6 +127,7 @@
     border-radius: 5px;
     align-content: center;
     box-shadow: 7px 7px var(--letra);
+    padding: auto;
 }
 
 /*Estilo al encabezado del Formulario*/
