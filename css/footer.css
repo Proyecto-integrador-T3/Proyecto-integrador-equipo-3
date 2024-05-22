@@ -58,13 +58,14 @@ footer{
  }
 }
 
-.footer {
+.footer .row {
     padding-top: 0.5em ;
     /*Separa un poco el footer de lo demás*/
     text-align: center;
     /*Creo que no es indispensable pues ya centré cada div del footer*/
     margin-top: auto;
     /*a propiedad margin-top establece el margen superior de un elemento especificando una longitud o un porcentaje. Los valores en porcentaje se refieren al ancho del elemento padre. Se permiten márgenes negativos.*/
-
+    margin: 0;
+    width: 100%;
 }
 
