@@ -20,10 +20,8 @@
     <!--Hojas de Estilo Usadas-->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="./css/primeraseccion.css">
-    <link rel="stylesheet" href="./css/cuartaseccion.css">
-    <link rel="stylesheet" href="./css/segundaseccion.css">
-    <link rel="stylesheet" href="./css/terceraseccion.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
 
 </head>
 
@@ -117,62 +115,87 @@
             </button>
         </div>
 
-        </section>
-        <section id="presentacion" class="col-12">
-            <div class="fondo1_perro">
-                <div class="tituloprincipal">
-                    <h1>¿Listos para cambiar la vida de su mejor amigo?</h1>
-                </div>
-                <div id="columna-1">
-                    <h1 class="titulo1">Vamos a descubrir como</h1>
-                    <p class="texto1">Nosotros “Golden Trainers” buscamos revolucionar la forma de educar a nuestras
-                        mascotas para que las personas y sus perros formen un vinculo unico</p>
-                </div>
-                <div id="container-clm">
-                    <div id="clm-2">
-                        <h1 class="titulo1 underline-title" style="text-align: right;">¿Quieres Saber Mas de Nosotros?
-                        </h1>
-                        <button class="button--acerca">Acerca de Nosotros</button>
+        </section>  
+
+        <!--Primera Seccion-->
+        <section id="Primera_Seccion">
+            <div class="card text-bg-success mb-3 " id="primeraseccion"> 
+                <img src="./img/perro1.jpg" alt="" class="card-img" >
+    
+                <div class="card-img-overlay ">
+                    <div class="row row-cols-sm-1" id="tituloPP">
+                        <h1 class="card-title text-center">¿Listos para cambiar la vida de su mejor amigo?</h1>
+                    </div>
+    
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        <div class="col" id="texto1p">
+                            <h2 class="card-text text-start ">Vamos a descubrir como</h2>
+                            <p class="card-text text-start ">Nosotros "Golden Trainers" buscamos revolucionar la forma de educar a nuestras mascotas para que las personas y sus perros formen un vínculo único</p>
+                        </div>
+        
+                        <div class="col" id="texto2p">
+                            <h2 class="card-text text-end  ">¿Quieres Saber Mas de Nosotros?</h2>
+                            <div class=" card-text text-end" id="botton-search">
+                                <a href="./html/acercaDeNosotros.html" class="btn btn-danger ">Acerca de Nosotros</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="servicios" class="col-12">
+        
+        <!--Segunda Seccion-->
+        <section id="servicios" >
             <div class="animated-background-title">
                 <h2>Nuestros Servicios</h2>
             </div>
-            <div class="services-content">
-                <div class="image-container">
-                    <img src="/img/adiestrador1.jpg" alt="Entrenamiento Canino">
+            <div class="row row-cols-1 row-cols-sm-2 gx-5" id="containr-sd">
+                <div class="col" id="columna-1">
+                    <div class="image-container col">
+                        <img src="/img/adiestrador1.jpg" alt="Entrenamiento Canino">
+                    </div>
                 </div>
-                <div class="text-container">
-                    <div class="golden-trainers">
-                        <p>En Golden Trainers, nos dedicamos a enriquecer la vida de los canes y sus familias en la
-                            Ciudad de México a través de experiencias de adiestramiento dinámicas y paseos seguros a
-                            domicilio mediante citas en línea.</p>
-                        <p id="negritas">¡Nuestro compromiso es doble!</p>
-                        <p class="commitment">Garantizar la felicidad y el bienestar de nuestros amigos de cuatro patas,
-                            y al mismo tiempo, reforzar el vínculo con sus dueños.</p>
+                <div class="col" id="columna-2">
+                    <div class="text-container" >
+                        <div class="golden-trainers">
+                            <p>En Golden Trainers, nos dedicamos a enriquecer la vida de los canes y sus familias en la
+                                Ciudad de México a través de experiencias de adiestramiento dinámicas y paseos seguros a
+                                domicilio mediante citas en línea.  <br>
+                                ¡Nuestro compromiso es doble!</p>
+                            <p class="commitment">Garantizar la felicidad y el bienestar de nuestros amigos de cuatro patas,
+                                y al mismo tiempo, reforzar el vínculo con sus dueños.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+
+        <!--Tercera Seccion-->
+        <section id="seccion-sabia" class="col-12">
+            <div class="card text-bg-success mb-3 " id="primeraseccion"> 
+                <img src="./img/perrito-pug.jpg" alt="" class="card-img" >
+
+                <div class="card-img-overlay ">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        <div class="col columna-texto">
+                            <h1 class="titulo-sabias">¿Sabias que?</h1>
+                            <p>Los perros pueden entender hasta 165 palabras y gestos humanos? <br>
+                                Estudios científicos han demostrado que los perros domésticos poseen la habilidad de aprender
+                                palabras y señales de forma similar a un niño pequeño. <br>
+                                Esto no solo hace que el entrenamiento sea posible y eficaz, sino que también abre una ventana
+                                fascinante hacia la comunicación interspecies, permitiéndonos fortalecer nuestros vínculos con
+                                nuestros fieles compañeros.</p>
+                        </div>
+                        <div class="col">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="seccion-sabias" class="col-12">
-            <div id="sabias-que">
-                <div class="contenedor-texto-sabias ">
-                    <h1 class="titulo-sabias">¿Sabias que?</h1>
-                    <p>Los perros pueden entender hasta 165 palabras y gestos humanos? </p>
-                    <p>Estudios científicos han demostrado que los perros domésticos poseen la habilidad de aprender
-                        palabras y señales de forma similar a un niño pequeño.</p>
-                    <p>Esto no solo hace que el entrenamiento sea posible y eficaz, sino que también abre una ventana
-                        fascinante hacia la comunicación interspecies, permitiéndonos fortalecer nuestros vínculos con
-                        nuestros fieles compañeros.</p>
-                </div>
-            </div>
-        </section>
-
+        <!--Cuarta Seccion-->
         <section id="seccion-servicios" class="col-12">
             <section id="contenedor-principal">
                 <div class="bloque-adiestramientos">
@@ -207,6 +230,10 @@
                     <button class="button--agendar">Agendar Cita</button>
                 </div>
             </section>
+        </section id="seccion-servicios" class="col-12"> 
+            
+        <section>
+
         </section>
     </main>
     <!--Inicia el Footer-->
@@ -263,6 +290,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

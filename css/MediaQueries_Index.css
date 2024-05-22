@@ -1,165 +1,274 @@
 /*----------------------------------------------------------------*/
-
-@media only screen and (max-width: 768px) {
-    /* Esto se aplicará a pantallas con un ancho de 768px o menos */
-
     /*
     * Aplicando Media Queries para la primera seccion
     */
-
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-        width: 100%; /* Hace que todas las columnas ocupen el 100% del ancho */
-        margin: 0; /* Restablece cualquier margen que pueda afectar */
+/* Para tabletas (entre 600px y 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+    #tituloPP {
+        font-size: 18px;
     }
 
-    div.fondo1_perro {
-        grid-template-columns: 1fr; /* Coloca todo en una sola columna */
-        padding: 10px; /* Reduce el relleno para pantallas pequeñas */
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px auto;
+
+    #texto1p {
+        padding-right: 80px;
+
+        padding-top: 0px;
+        max-height: 200px;
+        overflow: hidden;
+    }
+    #texto1p > p{
+        font-size: 15px;
     }
 
-    #columna-1, #container-clm {
-        margin-right: 0; /* Restablece los márgenes para que no empujen el contenido */
-        margin-left: 0;
-        margin-top: 50px; /* Espacio adicional en la parte superior si es necesario */
+    #texto2p  {
+        font-size: 18px;
+        padding-left: 80px;
+
+        padding-top: 0px;
+        max-height: 200px;
+        overflow: hidden;
+    }
+}
+
+/* Para móviles (menor a 600px) */
+
+@media (max-width: 600px) {
+    .card-img-overlay{
+        max-height: 100px;
+    }
+    #tituloPP {
         font-size: 12px;
-        height: auto; /* Altura automática para acomodar el contenido */
+    }
+
+    #texto1p {
+        font-size: 12px;
+        color: white;
+        padding: 0;
+        margin: 0;
         
     }
-    #container-clm{
-        display: flex;
-        flex-direction: column;
-        width: auto;
+
+    #texto2p {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+    #botton-search{
+        padding: 0;
     }
 
-    .button--acerca {
-        width: auto; /* Hace que el botón se ajuste al contenido */
-        padding: 10px; /* Ajuste del relleno para pantallas pequeñas */
+    .card-text a.btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
     }
 
-    .tituloprincipal, .tituloprincipal > h1 {
-        font-size: 40px; /* Reduce el tamaño del fuente para los títulos en pantallas pequeñas */
-        text-align: center; /* Centra el título */
-        height: auto; /* Altura automática para el título */
-    }
+}
 
-    .titulo1 {
-        font-size: 24px; /* Reduce el tamaño del fuente para los subtítulos */
-    }
-
-    .texto1 {
-        font-size: 16px; /* Reduce el tamaño del fuente para el cuerpo del texto */
-    }
-
-    /*
+/*
     * Aplicando Media Queries para la segunda seccion
-    */
-    #servicios{
-        height: 100vh;
+    */ 
+
+/* Para tabletas (entre 600px y 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+    
+    #containr-sd {
+        height: auto;
+        display: block;
+        
     }
 
-    .services-content {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        height: auto; /* Altura automática para adaptarse al contenido */
-        gap: 10px; /* Reduce el espacio entre elementos si es necesario */
-    }
+    #columna-1 {
+        display: flex;
+        align-content: center;
 
-    .image-container {
-        height: 200px; /* Altura automática para adaptarse a la imagen */
-        margin-bottom: 20px; /* Añade un margen abajo de la imagen */
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
     }
+    #columna-2 {
+        height: 480px;
+        width: 100%;
+        overflow: hidden;
 
-    .image-container img {
-        width: 100%; /* Asegúrate de que la imagen se ajuste al ancho */
-        height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
-        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
-        object-position: center; /* Centra la imagen dentro del contenedor */
-    }
-
-    .text-container {
-        max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
-        height: auto; /* Altura automática para adaptarse al contenido */
-        margin-top: 0; /* Restablece los márgenes para alinearlo con el diseño */
+        display: flex;
+        justify-content: center;
     }
 
     .animated-background-title {
-        width: 100%; /* Ajusta el ancho al 100% */
-        height: auto; /* Altura automática para el título */
-        margin: 20px 0; /* Añade margen arriba y abajo */
-        font-size: 30px;
+        width: 100%;
+        font-size: 35px;
     }
 
-    .commitment {
-        font-size: smaller; /* Ajusta el tamaño de fuente para dispositivos pequeños */
+    .text-container {
+        margin-top: 20px;
+    }
+    .image-container img{
+    
+
+
+        width: 300px; /* Asegúrate de que la imagen se ajuste al ancho */
+        height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        margin-top: 20px;
+        align-items: center;
+    
+        animation: sway 2s ease-in-out infinite;
+        
+    }
+    .text-container{
+        
+        max-width: 100%;
+        height: 100%;
+        overflow:auto;
+        
+    }
+    .golden-trainers > p{
+        font-size: 25px;
     }
     .golden-trainers{
-        margin: 20px 0 20px;
-        font-size: 29px;
+        width: 100%;
     }
-    /*
-    * Aplicando Media Queries para la tercera seccion
-    */
-    div#sabias-que {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        grid-template-rows: auto 1fr; /* Agrega dos filas, una para el texto y otra para el espacio extra */
-        background-position: right ; /* Ajusta esta posición según dónde esté el perro en tu imagen */
-    }
+}
 
-    .contenedor-texto-sabias {
-        /* Asegúrate de que ocupe la primera fila de la grilla */
-        grid-row: 1;
-        margin-right: 0; /* Elimina el margen derecho para que el texto no se desplace */
-        height: auto; /* Ajusta la altura automáticamente al contenido */
-        overflow: visible; /* Cambia a visible si el desbordamiento de texto no es un problema */
-        padding: 20px 0; /* Añade algo de relleno en la parte superior e inferior */
-    }
-
-    /* Ajustes adicionales para centrar el texto y reducir el tamaño de fuente si es necesario */
-    .contenedor-texto-sabias > h1, 
-    .contenedor-texto-sabias > p {
-        text-align: center;
-        font-size: 24px; /* Ajusta el tamaño de fuente según necesites */
-    }
-    
-    /* Si necesitas ajustar la altura del div para la imagen de fondo, puedes hacerlo aquí */
-    #seccion-sabias {
+/* Para móviles (menor a 600px) */
+@media (max-width: 600px) {
+    #containr-sd {
         height: auto;
-        padding-bottom: 20px; /* Agrega un relleno en la parte inferior si es necesario */
-    }
-    .titulo-sabias > p {
-        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); /* Incrementa el desenfoque y opacidad para una mayor legibilidad */
-        color: black;
-    }
-    .contenedor-texto-sabias {
-        background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad para leer mejor el texto */
-        border-radius: 15px; /* Opcional para bordes redondeados */
-        padding: 20px; /* Agrega un poco más de espacio alrededor del texto */
+        display: block;
+        
     }
 
-    /*
+    #columna-1 {
+        display: flex;
+        align-content: center;
+
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    #columna-2 {
+        height: 480px;
+        width: 100%;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .animated-background-title {
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .text-container {
+        margin-top: 20px;
+        height: 100px;
+    }
+    .image-container img{
+
+        width: 300px; /* Asegúrate de que la imagen se ajuste al ancho */
+        height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+        margin-top: 20px;
+        align-items: center;
+    
+        animation: sway 2s ease-in-out infinite;
+        
+    }
+    .text-container{
+        
+        max-width: 100%;
+        height: 450px;
+
+    }
+    .golden-trainers > p{
+        font-size: 23px;
+    }
+    .golden-trainers{
+        width: 100%;
+    }
+}   
+
+
+/*
+    * Aplicando Media Queries para la tercera seccion
+*/ 
+/* Para tabletas (entre 600px y 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+    .columna-texto {
+        font-size: 13px;
+        height: 350px;
+    }
+
+    .titulo-sabias {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #primeraseccion {
+        height: auto;
+    }
+}
+
+/* Para móviles (menor a 600px) */
+@media (max-width: 600px) {
+    .columna-texto  {
+        font-size: 12px;
+        height: 300px;
+        text-align: center;
+    }
+
+    .titulo-sabias {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #primeraseccion {
+        height: auto;
+    }
+  
+}
+
+/*
     * Aplicando Media Queries para la cuarta seccion
-    */
+*/ 
+/* Para tabletas (entre 600px y 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
     #contenedor-principal {
-        grid-template-columns: 1fr; /* Una sola columna para dispositivos móviles */
-        margin: 20px; /* Margen reducido para dispositivos móviles */
-        height: 100vh;
-      }
+        grid-template-columns: 1fr; /* Una columna */
+        width: 600px;
+    }
+
+    .bloque-llamado-accion {
+        grid-column: 1 / 2;
+    }
+
+    .bloque-adiestramientos, .bloque-beneficios, .bloque-llamado-accion {
+        width: 100%;
+        height: auto;
+        font-size: 11px;
+    }
+}
+
+/* Para móviles (menor a 600px) */
+@media (max-width: 600px) {
+    #contenedor-principal {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    .bloque-llamado-accion {
+        grid-column: 1 / 2;
+    }
+
+    .bloque-adiestramientos, .bloque-beneficios, .bloque-llamado-accion {
+        width: 100%;
+        height: auto;
+        font-size: 10px;
+    }
     
-      .bloque-adiestramientos,
-      .bloque-beneficios,
-      .bloque-llamado-accion {
-        width: 100%; /* Ancho completo para adaptarse al contenedor */
-        height: auto; /* Altura automática para ajustarse al contenido */
-        margin: 10px 0; /* Margen superior e inferior para separar los bloques */
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Sombra más sutil para dispositivos móviles */
-      }
-    
-      .bloque-llamado-accion {
-        grid-column: 1; /* Asegura que ocupe la columna completa */
-      }
-    
-      .button--agendar {
-        margin: 20px auto; /* Centra el botón en dispositivos móviles */
-      }
+    .bloque-adiestramientos > ul, .bloque-beneficios > ul, .bloque-llamado-accion > p {
+        margin: 20px 20px;
+    }
 }
