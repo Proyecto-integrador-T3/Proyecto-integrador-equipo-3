@@ -57,17 +57,19 @@
 
     <!--Inicio de pagina de Contacto-->
     <!-- Creamos un contenedor dividido en dos columnas, cada una para un mensaje diferente. -->
-    <div class="container mt-5">
+    <div class="container mt-3">
         <div class="row">
-            <div class="col-xl-6" id="dudas">
-                <h3>¿Tienes algún problema, duda, queja o sugerencia?</h3>
+            <div class="col-l-6" id="dudas">
+                <h4>¿Tienes algún problema, duda, queja o sugerencia?</h4>
                 <p>¡Hola!</p>
-                <p>Estamos encantados de que quieras ponerte en contacto con nosotros. En Golden Trainers, valoramos la
+                <p>Estamos encantados de que quieras ponerte en contacto con nosotros. 
+                    <br>
+                    En Golden Trainers, valoramos la
                     retroalimentación de nuestros clientes y estamos aquí para ayudarte con cualquier pregunta,
                     comentario o inquietud que puedas tener.</p>
             </div>
-            <div class="col-xl-6" id="trabajo">
-                <h3>¡Únete a nuestro increíble equipo de trabajo!</h3>
+            <div class="col-l-6" id="trabajo">
+                <h4>¡Únete a nuestro increíble equipo de trabajo!</h4>
                 <p>¿Estás buscando una oportunidad para crecer profesionalmente y colaborar con personas apasionadas
                     como tú? ¡No busques más!</p>
                 <p>¡Tu talento es lo que nos hace brillar!</p>
@@ -76,7 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="container LOGIN w-75 mt-5 mb-5 rounded shadow" id="login">
+    <div class="container LOGIN w-75 mt-5 mb-5" id="login">
         <div class="row align-items-stretch ">
             <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start">
             </div>
@@ -129,10 +131,23 @@
                             Por favor ingresa un correo valido.
                         </div>
                     </div>
+                    <!--Input Correo-->
+                    <div class="mb-4 position-relative">
+                        <label for="comments" class="form-label">Comentarios</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><img src="../img/comment.svg" alt="iconoComentarios"></span>
+                            <textarea class="form-control" name="comments" placeholder="Ingresa tus comentarios" rows="4"></textarea>
+                            <br>
+                        </div>
+                        <div class="alert alert-danger mt-2 d-none" id="commentsAlert" role="alert">
+                            Por favor ingresa tus comentarios.
+                        </div>
+                    </div>
+                    
 
                     <!--Boton registrarse-->
                     <div class="d-grid pt-1">
-                        <button type="submit" class="btn" id="botonRegistrarse">Registrarse</button>
+                        <button type="submit" class="btn" id="botonRegistrarse">Enviar</button>
                     </div>
                 </form>
             </div>
