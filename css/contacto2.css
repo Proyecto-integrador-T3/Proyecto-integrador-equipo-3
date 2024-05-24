@@ -1,0 +1,42 @@
+/*Creacion de variables de color*/
+:root {
+    --letra: #780000;
+    --letrabotones: #FDF0D5;
+    --fondobody: #CCE6F4;
+    --resaltar: #C1121F;
+}
+
+
+body { /*Asegura que el body ocupe todo el alto de la pantalla */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Asignar el fondo para el body*/
+#idbody {
+    background-color: var(--fondobody);
+}
+
+#dudas{
+    color: var(--letra);
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--letrabotones);
+    border-radius: 10px;
+    padding: 15px ;
+    border: solid 2px var(--letra);
+}
+#trabajo{
+    color: var(--letra);
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--letrabotones);
+    border-radius: 10px;
+    padding: 15px;
+    border: solid 2px var(--letra);
+}
