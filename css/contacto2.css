@@ -19,30 +19,42 @@ body { /*Asegura que el body ocupe todo el alto de la pantalla */
 }
 /* Cuadros de texto */
 #dudas{
-    color: var(--letrabotones);
+    color: var(--letra);
     font-size: 1.1em;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: rgb(86, 7, 12, 0.85);
+    background-color: whitesmoke;
     border-radius: 10px;
-    padding: 25px ;
-    border: solid 2px var(--letrabotones);
+    padding: 40px ;
+    border: solid 2px var(--letra);
 }
 #trabajo{
-    color: var(--letrabotones);
+    color: var(--letra);
     font-size: 1.1em;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: rgb(86, 7, 12, 0.85);
+    background-color: whitesmoke;
     border-radius: 10px;
-    padding: 25px ;
-    border: solid 2px var(--letrabotones);
+    padding: 40px;
+    border: solid 2px var(--letra);
 }
 /* Imagen del formulario */
 .bg {
-    background-image: url(../img/contactDog.jpg);
+    background-image: url(../img/contactDog2.png);
     background-position: center center;
     background-size: cover;
+}
+
+#botonEnviar{
+    background-color: var(--letra);
+    color: var(--letrabotones);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
 }
