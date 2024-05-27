@@ -7,205 +7,54 @@
 }
 
 
-/* Crear diseño para el tituulo */
-#titulo {
-    color: var(--letra);
-    text-align: center;
-
-
-}
-
-body {
+body { /*Asegura que el body ocupe todo el alto de la pantalla */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-
-@media (min-width:770px) {
-
-    /* Utilizando medias querys para que el diseño sea responsivo*/
-    /* Crear las columnas y filas en el contenedor */
-    .container {
-        display: grid;
-        grid-template-columns: 2fr 2fr 1fr;
-        grid-template-areas:
-            "primera segunda tercera "
-            "cuarta cuarta tercera";
-        text-align: center;
-    }
-
-    /*Se crean columnas y filas para darle un orden a la informacion*/
-    .infogolden {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "primera segunda tercera ";
-        text-align: center;
-        align-content: center;
-        margin-top: 10px;
-
-    }
-
-    /*Para que el titulo se vea centrado tomando en cuenta el formulario*/
-    #titulo {
-        width: 75%;
-    }
-
-    /*Se ve mas estetico*/
-    .chamba {
-        width: 80%;
-    }
-
-    /*Se ve mas estetico*/
-    .dudas {
-        width: 80%;
-    }
-
-    /*Acomodar la parte del icono y encabezado del formulario*/
-    .datoseimagen {
-        display: grid;
-        grid-template-columns: 1fr 10fr;
-    }
-
-    #horario {
-        margin: 0px 10px;
-    }
-
-    #telefono {
-        margin: 0px 10px;
-    }
-
-    #correo {
-        margin: 0px 10px;
-    }
-}
-
-@media (max-width: 770px) {
-    #correo {
-        width: 100%;
-    margin: 10px 0px;
-    }
-
-    #telefono {
-        width: 100%;
-    margin: 10px 0px;
-    }
-
-    #horario {
-        width: 100%;
-    margin: 10px 0px;
-    }
-}
-
-/*Darle estilo al area de "Dudas*/
-.dudas {
-    color: var(--letra);
-    justify-self: center;
-    grid-area: primera;
-    margin-left: 7%;
-    align-content: space-around;
-    text-align: center;
-
-}
-
-/*Darle estilo al area de "Chamba*/
-.chamba {
-    color: var(--letra);
-    grid-area: segunda;
-    margin-left: 7%;
-    align-content: space-around;
-    text-align: center;
-}
-
-/*Darle estilo al area de la informacion de Golden Trainers*/
-.infogolden {
-    color: var(--letra);
-    grid-area: cuarta;
-    margin-top: 20px;
-
-}
-
-/*Darle estilo al area del Formulario*/
-#formulario {
-    background-color: #FFFFFF;
-    grid-area: tercera;
-    border-radius: 5px;
-    align-content: center;
-    box-shadow: 7px 7px var(--letra);
-    padding: auto;
-}
-
-/*Estilo al encabezado del Formulario*/
-#datosaside {
-    color: var(--letra);
-    text-align: center;
 }
 
 /*Asignar el fondo para el body*/
 #idbody {
     background-color: var(--fondobody);
 }
-
-/*Darle estilo al area de "Horario*/
-#horario {
-    border: solid;
-    border-width: 1px;
-    border-color: black;
-    /* width: 100%;
-    margin: 10px 0px; */
-    background-color: var(--resaltar);
-    color: var(--letrabotones);
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
-}
-
-/*Darle estilo al area de "Telefono*/
-#telefono {
-    border: solid;
-    border-width: 1px;
-    /* width: 100%;
-    margin: 10px 0px; */
-    border-color: black;
-    background-color: var(--resaltar);
-    color: var(--letrabotones);
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
-}
-
-/*Darle estilo al area de "Correo*/
-#correo {
-    border: solid;
-    border-width: 1px;
-    border-color: black;
-    /* width: 100%;
-    margin: 10px 0px; */
-    background-color: var(--resaltar);
-    color: var(--letrabotones);
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
-}
-
-/*Darle color al Boton del Formulario*/
-#botonenviar {
-    background-color: var(--letra);
-    /* display: flex;
-    align-items: center; */
-}
-
-/*Darle estilo al area del Encabezado del Formulario*/
-.datoseimagen {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    width: 100vw;
-}
-
-/*Darle estilo al Icono del Formulario*/
-#icono {
-    align-self: center;
-    justify-self: center;
+/* Cuadros de texto */
+#dudas{
     color: var(--letra);
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 40px ;
+
+}
+#trabajo{
+    color: var(--letra);
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 40px;
+    border: solid 2px var(--letra);
+}
+/* Imagen del formulario */
+.bg {
+    background-image: url(../img/contactDog2.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+#botonEnviar{
+    background-color: var(--letra);
+    color: var(--letrabotones);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
 }
