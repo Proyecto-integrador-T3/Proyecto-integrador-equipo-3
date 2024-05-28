@@ -1,0 +1,113 @@
+/* Creación de variables CSS */
+:root {
+    --color-fondo-principal: #780000;
+    --color-iconos-redes: #C1121F;
+    --color-texto-barra-navegacion: #FDF0D5;
+    --color-fondo-barra-navegacion: #175676;
+    --color-fondo-paginas: #CCE6F4;
+    --color-dorado: #EDB33B;
+
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-titulos: "Poppins", sans-serif;
+
+    --tamaño-titulos: 85px;
+    --tamaño-subtitulos: 36px;
+    --tamaño-cuerpotexto: 30px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-paginas);
+}
+
+#paginabody {
+    background-color: var(--color-fondo-paginas);
+}
+
+/* Barra lateral fija */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    background-color: var(--color-fondo-barra-navegacion);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+/* Mensaje de Bienvenida */
+.welcome-message {
+    padding: 10px 15px;
+    text-align: center;
+    color: var(--color-texto-barra-navegacion);
+}
+
+.welcome-message h4 {
+    font-family: var(--fuente-titulos);
+    font-size: 20px;
+    color: var(--color-dorado);
+}
+
+/* Espacio para el contenido principal */
+.main-content {
+    margin-left: 240px; /* Ajusta este valor según el ancho de tu barra lateral */
+    padding: 20px;
+}
+
+.main-content .container {
+    max-width: 800px; /* Reduce el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para los enlaces de la barra lateral */
+.sidebar .nav-link {
+    font-weight: 500;
+    color: var(--color-texto-barra-navegacion);
+    padding: 10px 15px;
+    display: block;
+}
+
+.sidebar .nav-link:hover {
+    color: var(--color-dorado);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: var(--color-dorado);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.logout .nav-link {
+    color: var(--color-texto-barra-navegacion);
+}
+
+.logout .nav-link:hover {
+    color: var(--color-dorado);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de administración */
+section {
+    padding: 20px 0;
+}
+
+/* Encabezados */
+h2 {
+    font-family: var(--fuente-titulos);
+    font-size: var(--tamaño-subtitulos);
+    color: var(--color-fondo-barra-navegacion);
+    margin-bottom: 20px;
+}

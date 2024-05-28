@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body id="paginabody">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <nav class="col-md-2 d-none d-md-block sidebar" id="sidebar">
+                <div class="sidebar-sticky d-flex flex-column justify-content-between">
+                    <div>
+                        <!-- Mensaje de Bienvenida -->
+                        <div class="welcome-message">
+                            <h4>¡Bienvenido!</h4>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#adminProductos">Administración de Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#adminUsuarios">Administración de Usuarios</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Enlace de Cerrar Sesión en la parte baja -->
+                    <div class="logout" id="logout">
+                        <a class="nav-link" href="../index.html">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <section id="adminProductos">
+                    <h2>Administración de Productos</h2>
+                    <!-- Aquí puedes agregar el contenido de la sección de administración de productos -->
+                </section>
+                <section id="adminUsuarios">
+                    <h2>Administración de Usuarios</h2>
+                    <!-- Aquí puedes agregar el contenido de la sección de administración de usuarios -->
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

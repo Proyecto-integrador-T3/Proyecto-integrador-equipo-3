@@ -6,90 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/registroProductos.css">
 </head>
 
-<body id="idbody">
-    <div class="container mt-5" >
-        <form id="productForm">
-            <h2 class="text-center">Administrador de Productos</h2>
-            <div class="mb-3">
-                <label for="productName" class="form-label">Nombre del Producto</label>
-                <input type="text" class="form-control" id="productName" required>
-                <div class="alert alert-danger mt-2 d-none" id="productNameAlert" role="alert">
-                    El nombre del producto debe comenzar con mayúscula y no debe contener caracteres especiales.
+<body id="paginabody">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <nav class="col-md-2 d-none d-md-block sidebar" id="sidebar">
+                <div class="sidebar-sticky d-flex flex-column justify-content-between">
+                    <div>
+                        <!-- Mensaje de Bienvenida -->
+                        <div class="welcome-message">
+                            <h4>¡Bienvenido!</h4>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../html/registroProductos.html">Administración de Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/adminUsuarios.html">Administración de Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#adminUsuarios">Pedidos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Enlace de Cerrar Sesión en la parte baja -->
+                    <div class="logout bottom-0">
+                        <a class="nav-link" href="../index.html" >Cerrar Sesión</a>
+                    </div>
                 </div>
-                <div class="alert alert-danger mt-2 d-none" id="existingProductAlert" role="alert">
-                    ¡El producto ya está registrado!
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="productDescription" class="form-label">Descripción</label>
-                <textarea class="form-control" id="productDescription" rows="3" required></textarea>
-                <div class="alert alert-danger mt-2 d-none" id="productDescriptionAlert" role="alert">
-                    La descripción del producto no debe contener caracteres especiales.
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="productPrice" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="productPrice" required>
-                <div class="alert alert-danger mt-2 d-none" id="productPriceAlert" role="alert">
-                    El precio del producto no puede ser negativo.
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="productImage" class="form-label">URL de la Imagen</label>
-                <input type="url" class="form-control" id="productImage" required>
-                <div class="alert alert-danger mt-2 d-none" id="productImageAlert" role="alert">
-                    Por favor ingresa la URL de la imagen del producto.
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar</button>
-        </form>
+            </nav>
 
-        <div id="productCards" class="row mt-5">
-            <!-- Las tarjetas de productos se generarán aquí -->
+            <!-- Contenido principal -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 main-content">
+                <div class="container mt-5">
+                    <form id="productForm">
+                        <h2 class="text-center">Administrador de Productos</h2>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="productName" required>
+                            <div class="alert alert-danger mt-2 d-none" id="productNameAlert" role="alert">
+                                El nombre del producto debe comenzar con mayúscula y no debe contener caracteres especiales.
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="existingProductAlert" role="alert">
+                                ¡El producto ya está registrado!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                            <div class="alert alert-danger mt-2 d-none" id="productDescriptionAlert" role="alert">
+                                La descripción del producto no debe contener caracteres especiales.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                            <div class="alert alert-danger mt-2 d-none" id="productPriceAlert" role="alert">
+                                El precio del producto no puede ser negativo.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">URL de la Imagen</label>
+                            <input type="url" class="form-control" id="productImage" required>
+                            <div class="alert alert-danger mt-2 d-none" id="productImageAlert" role="alert">
+                                Por favor ingresa la URL de la imagen del producto.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar</button>
+                    </form>
+
+                    <div id="productCards" class="row mt-5">
+                        <!-- Las tarjetas de productos se generarán aquí -->
+                    </div>
+                </div>
+
+                <!-- Modal para editar producto -->
+                <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProductModalLabel">Editar Producto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="cerrarModal">
+                                <form id="editProductForm" data-product-index="">
+                                    <div class="mb-3">
+                                        <label for="editProductName" class="form-label">Nombre del Producto</label>
+                                        <input type="text" class="form-control" id="editProductName" required>
+                                        <div class="alert alert-danger d-none" id="editProductNameAlert">Nombre inválido. Debe comenzar con mayúscula.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editProductDescription" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="editProductDescription" rows="3" required></textarea>
+                                        <div class="alert alert-danger d-none" id="editProductDescriptionAlert">Descripción inválida.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editProductPrice" class="form-label">Precio</label>
+                                        <input type="number" class="form-control" id="editProductPrice" required>
+                                        <div class="alert alert-danger d-none" id="editProductPriceAlert">Precio inválido.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editProductImage" class="form-label">URL de la Imagen</label>
+                                        <input type="url" class="form-control" id="editProductImage" required>
+                                        <div class="alert alert-danger d-none" id="editProductImageAlert">URL de imagen inválida.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="saveChangesBtn">Guardar Cambios</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
-
-<!-- Modal para editar producto -->
-<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editProductModalLabel">Editar Producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="cerrarModal">
-                <form id="editProductForm" data-product-index="">
-                    <div class="mb-3">
-                        <label for="editProductName" class="form-label">Nombre del Producto</label>
-                        <input type="text" class="form-control" id="editProductName" required>
-                        <div class="alert alert-danger d-none" id="editProductNameAlert">Nombre inválido. Debe comenzar con mayúscula.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="editProductDescription" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="editProductDescription" rows="3" required></textarea>
-                        <div class="alert alert-danger d-none" id="editProductDescriptionAlert">Descripción inválida.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="editProductPrice" class="form-label">Precio</label>
-                        <input type="number" class="form-control" id="editProductPrice" required>
-                        <div class="alert alert-danger d-none" id="editProductPriceAlert">Precio inválido.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="editProductImage" class="form-label">URL de la Imagen</label>
-                        <input type="url" class="form-control" id="editProductImage" required>
-                        <div class="alert alert-danger d-none" id="editProductImageAlert">URL de imagen inválida.</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="saveChangesBtn">Guardar Cambios</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
     <script src="../js/registroProductos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
