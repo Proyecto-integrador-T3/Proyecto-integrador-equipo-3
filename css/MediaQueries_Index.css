@@ -3,11 +3,36 @@
     * Aplicando Media Queries para la primera seccion
     */
 /* Para tabletas (entre 600px y 991px) */
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1200px) {
     #tituloPP {
         font-size: 18px;
     }
 
+    #texto1p {
+        padding-right: 80px;
+
+        padding-top: 0px;
+        padding-right:50px;
+        max-height: 200px;
+        overflow: hidden;
+    }
+    #texto1p > p{
+        font-size: 15px;
+    }
+
+    #texto2p  {
+        font-size: 18px;
+        padding-left: 80px;
+        padding-top: 0px;
+        
+        max-height: 200px;
+        overflow: hidden;
+    }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+    #tituloPP {
+        font-size: 18px;
+    }
 
     #texto1p {
         padding-right: 80px;
@@ -27,6 +52,38 @@
         padding-top: 0px;
         max-height: 200px;
         overflow: hidden;
+    }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+    .card-img-overlay{
+        max-height: 100px;
+    }
+    #tituloPP {
+        font-size: 12px;
+    }
+
+    #texto1p {
+        font-size: 12px;
+        color: white;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    #texto2p {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+    #botton-search{
+        padding: 0;
+    }
+
+    .card-text a.btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
     }
 }
 
@@ -69,6 +126,69 @@
 /*
     * Aplicando Media Queries para la segunda seccion
     */ 
+
+    @media (min-width: 992px) and (max-width: 1170px) {
+    
+        #containr-sd {
+            height: auto;
+            display: block;
+            
+        }
+    
+        #columna-1 {
+            display: flex;
+            align-content: center;
+    
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        #columna-2 {
+            height: 480px;
+            width: 100%;
+            overflow: hidden;
+
+            font-size: 15px;
+    
+            display: flex;
+            justify-content: center;
+        }
+    
+        .animated-background-title {
+            width: 100%;
+            font-size: 35px;
+        }
+    
+        .text-container {
+            margin-top: 20px;
+        }
+        .image-container img{
+        
+    
+    
+            width: 300px; /* Asegúrate de que la imagen se ajuste al ancho */
+            height: 100%; /* Esto ajustará la altura automáticamente para mantener la relación de aspecto */
+            object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+            margin-top: 20px;
+            align-items: center;
+        
+            animation: sway 2s ease-in-out infinite;
+            
+        }
+        .text-container{
+            
+            max-width: 100%;
+            height: 100%;
+            overflow:auto;
+            
+        }
+        .golden-trainers > p{
+            font-size: 25px;
+        }
+        .golden-trainers{
+            width: 100%;
+        }
+    }    
 
 /* Para tabletas (entre 600px y 991px) */
 @media (min-width: 600px) and (max-width: 991px) {
@@ -196,9 +316,24 @@
     * Aplicando Media Queries para la tercera seccion
 */ 
 /* Para tabletas (entre 600px y 991px) */
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
     .columna-texto {
-        font-size: 13px;
+        font-size: 20px;
+        height: 350px;
+    }
+
+    .titulo-sabias {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #primeraseccion {
+        height: auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .columna-texto {
+        font-size: 16px;
         height: 350px;
     }
 
@@ -213,15 +348,32 @@
 }
 
 /* Para móviles (menor a 600px) */
-@media (max-width: 600px) {
+@media (max-width: 991px) {
     .columna-texto  {
         font-size: 12px;
         height: 300px;
         text-align: center;
     }
 
-    .titulo-sabias {
-        font-size: 1.5rem;
+    .columna-texto > h1{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #primeraseccion {
+        height: auto;
+    }
+  
+}
+@media (max-width: 767px) {
+    .columna-texto  {
+        font-size: 12px;
+        height: 300px;
+        text-align: center;
+    }
+
+    .columna-texto > h1{
+        font-size: 15px;
         text-align: center;
     }
 
@@ -234,6 +386,41 @@
 /*
     * Aplicando Media Queries para la cuarta seccion
 */ 
+@media (min-width: 1200px) and (max-width: 1400px) {
+    #contenedor-principal {
+        grid-template-columns: 1fr; /* Una columna */
+        height: 900px;   
+    }
+
+    .bloque-llamado-accion {
+        grid-column: 1 / 2;
+    }
+
+    .bloque-adiestramientos, .bloque-beneficios, .bloque-llamado-accion {
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #contenedor-principal {
+        grid-template-columns: 1fr; /* Una columna */
+        width: 600px;
+    }
+
+    .bloque-llamado-accion {
+        grid-column: 1 / 2;
+    }
+
+    .bloque-adiestramientos, .bloque-beneficios, .bloque-llamado-accion {
+        width: 100%;
+        height: auto;
+        font-size: 13px;
+    }
+}
+
+
 /* Para tabletas (entre 600px y 991px) */
 @media (min-width: 600px) and (max-width: 991px) {
     #contenedor-principal {
@@ -248,7 +435,7 @@
     .bloque-adiestramientos, .bloque-beneficios, .bloque-llamado-accion {
         width: 100%;
         height: auto;
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 
