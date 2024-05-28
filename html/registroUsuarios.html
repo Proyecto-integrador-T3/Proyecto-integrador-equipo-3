@@ -52,7 +52,8 @@
                         </div>
                         <div class="nav-item">
                             <img src="/img/iconoUsuario.svg" alt="Icono barra de navegación" class="iconoNavbar">
-                            <a class="nav-link" href="../CRUD/login.html" style="color: var(--color-texto-barra-navegacion);">Iniciar
+                            <a class="nav-link" href="../CRUD/login.html"
+                                style="color: var(--color-texto-barra-navegacion);">Iniciar
                                 sesión Registrarse</a>
                         </div>
                     </div>
@@ -62,150 +63,151 @@
     </header>
     <!--Fin de navbar-->
     <div>
-    <div class="container LOGIN w-75 mt-5 mb-5 rounded shadow" id="login">
-        <div class="row align-items-stretch ">
-            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start">
-            </div>
-            <div class="col bg-white rounded-end p-5">
-                <div class="text-center">
-                    <img src="/img/arrow-up-right-circle-fill.svg" width="48" alt="">
+        <div class="container LOGIN w-75 mt-5 mb-5" id="login">
+            <div class="row align-items-stretch ">
+                <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start">
                 </div>
-                <h2 class="fw-bold text-center pt-5 mb-5">Regístrate</h2>
-
-                <!-- LOGIN -->
-                <form action="">
-
-                    <!--Input Nombre completo-->
-                    <div class="mb-4 position-relative">
-                        <label for="text" class="form-label">Nombre Completo</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><img src="../img/person-fill.svg"
-                                    alt="iconoNombreCompleto"></span><!--Cambiar icono por icono de email-->
-                            <input type="text" class="form-control" name="fullName"
-                                placeholder="Ingresa tu Nombre Completo">
-                        </div>
-                        <div class="alert alert-danger mt-2 d-none" id="fullNameAlert" role="alert">
-                            El nombre completo no puede estar vacio.
-                        </div>
+                <div class="col bg-white rounded-end p-5">
+                    <div class="text-center">
+                        <img src="/img/arrow-up-right-circle-fill.svg" width="48" alt="">
                     </div>
+                    <h2 class="fw-bold text-center pt-5 mb-5">Regístrate</h2>
 
-                    <!--Input Número de teléfono-->
-                    <div class="mb-4 position-relative">
-                        <label for="tel" class="form-label">Número de teléfono</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><img src="../img/contact_phone.svg"
-                                    alt="iconoTelefono"></span><!--Cambiar icono por icono de telefono-->
-                            <input type="tel" class="form-control" maxlength="10" minlength="10" name="cellNumber"
-                                placeholder="Ingresa tu Número de teléfono">
+                    <!-- LOGIN -->
+                    <form action="">
+
+                        <!--Input Nombre completo-->
+                        <div class="mb-4 position-relative">
+                            <label for="text" class="form-label">Nombre Completo</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><img src="../img/person-fill.svg"
+                                        alt="iconoNombreCompleto"></span><!--Cambiar icono por icono de email-->
+                                <input type="text" class="form-control" name="fullName"
+                                    placeholder="Ingresa tu Nombre Completo">
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="fullNameAlert" role="alert">
+                                El nombre completo no puede estar vacio.
+                            </div>
                         </div>
-                        <div class="alert alert-danger mt-2 d-none" id="cellNumberAlert" role="alert">
-                            Por favor ingresa un número de telefono valido.
+
+                        <!--Input Número de teléfono-->
+                        <div class="mb-4 position-relative">
+                            <label for="tel" class="form-label">Número de teléfono</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><img src="../img/contact_phone.svg"
+                                        alt="iconoTelefono"></span><!--Cambiar icono por icono de telefono-->
+                                <input type="tel" class="form-control" maxlength="10" minlength="10" name="cellNumber"
+                                    placeholder="Ingresa tu Número de teléfono">
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="cellNumberAlert" role="alert">
+                                Por favor ingresa un número de telefono valido.
+                            </div>
                         </div>
-                    </div>
 
-                    <!--Input Correo-->
-                    <div class="mb-4 position-relative">
-                        <label for="email" class="form-label">Correo</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><img src="../img/mail.svg" alt="iconoCorreo"></span>
-                            <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
-                            <br>
+                        <!--Input Correo-->
+                        <div class="mb-4 position-relative">
+                            <label for="email" class="form-label">Correo</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><img src="../img/mail.svg" alt="iconoCorreo"></span>
+                                <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
+                                <br>
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="emailAlert" role="alert">
+                                Por favor ingresa un correo valido.
+                            </div>
                         </div>
-                        <div class="alert alert-danger mt-2 d-none" id="emailAlert" role="alert">
-                            Por favor ingresa un correo valido.
+
+                        <!--Input Contraseña-->
+                        <div class="mb-4 position-relative">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Ingresa tu contraseña">
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="passwordAlert" role="alert">
+                                "La contraseña debe tener al menos 8 caracteres."
+                                <br>
+                                "La contraseña debe contener al menos una letra mayúscula."
+                                <br>
+                                "La contraseña debe contener al menos un signo de puntuación o carácter especial."
+                            </div>
                         </div>
-                    </div>
-
-                    <!--Input Contraseña-->
-                    <div class="mb-4 position-relative">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
-                            <input type="password" class="form-control" name="password"
-                                placeholder="Ingresa tu contraseña">
+                        <!--Input Repetir Contraseña-->
+                        <div class="mb-4 position-relative">
+                            <label for="password" class="form-label">Vuelve a introducir tu contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
+                                <input type="password" class="form-control" name="passwordValidate"
+                                    placeholder="Vuelve a introducir tu contraseña">
+                            </div>
+                            <div class="alert alert-danger mt-2 d-none" id="passwordWrongAlert" role="alert">
+                                "Las contraseñas no coinciden."
+                            </div>
                         </div>
-                        <div class="alert alert-danger mt-2 d-none" id="passwordAlert" role="alert">
-                            "La contraseña debe tener al menos 8 caracteres."
-                            <br>
-                            "La contraseña debe contener al menos una letra mayúscula."
-                            <br>
-                            "La contraseña debe contener al menos un signo de puntuación o carácter especial."
+                        <!--Boton registrarse-->
+                        <div class="d-grid pt-1">
+                            <button type="submit" class="btn" id="botonRegistrarse">Registrarse</button>
                         </div>
-                    </div>
-                    <!--Input Repetir Contraseña-->
-                    <div class="mb-4 position-relative">
-                        <label for="password" class="form-label">Vuelve a introducir tu contraseña</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><img src="../img/key.svg" alt="keyIcon"></span>
-                            <input type="password" class="form-control" name="passwordValidate"
-                                placeholder="Vuelve a introducir tu contraseña">
-                        </div>
-                        <div class="alert alert-danger mt-2 d-none" id="passwordWrongAlert" role="alert">
-                            "Las contraseñas no coinciden."
-                        </div>
-                    </div>
-                    <!--Boton registrarse-->
-                    <div class="d-grid pt-1">
-                        <button type="submit" class="btn" id="botonRegistrarse">Registrarse</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-<!--Inicia el Footer-->
-<footer>
-<div class="footer" id="footer">
-
-    <div class="row p-5 text-white pb-2" style="background-color: #780000;">
-        <!--Columnas-->
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <p>Inicio</p>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <p>Contáctanos</p>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <p>Acerca de nosotros</p>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <p>Cátalogo</p>
-        </div>
-
-        <hr>
-
-
-        <div>
-            <!--Redes-->
-            <div class="container-redes">
-
-                <!--Las patitas-->
-                <div class="container-logo">
-                    <a href="#">
-                        <img class="container-logo__img" src="../img/huellitas.svg" alt="imagen">
-                    </a>
-                </div>
-
-
-                <div class="container-redes__social">
-
-
-                    <a class="links" href="#"><i class="fa-brands fa-facebook icon"></i></a>
-
-                    <a class="links" href="#"><i class="fa-brands fa-instagram icon"></i></a>
-
-                    <a class="links" href="#"><i class="fa-brands fa-x-twitter icon"></i></a>
-                </div>
-
-                <div class="final-container">
-                    <p>&copy; 2020 Golden Trainers</p>
+                    </form>
                 </div>
             </div>
-            <!--El copyright-->
         </div>
-    </div>
-</div><!--Termina el Footer-->
-</footer>
+        <!--Inicia el Footer-->
+        <div class="footer">
+            <div class="row p-5 text-white pb-2" style="background-color: #780000;">
+                <!--Columnas-->
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <!--Agregamos los links-->
+                    <a href="../index.html" style="color: whitesmoke; text-decoration: none;">Inicio</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="./contacto.html" style="color: whitesmoke; text-decoration: none;">Contáctanos</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="./acercaDeNosotros.html" style="color: whitesmoke; text-decoration: none;">Acerca de
+                        nosotros</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <a href="./Catalogo.html" style="color: whitesmoke; text-decoration: none;">Cátalogo</a>
+                </div>
 
+
+                <hr>
+
+
+                <div>
+                    <!--Redes-->
+                    <div class="container-redes">
+
+                        <!--Las patitas-->
+                        <div class="container-logo">
+                            <a href="#">
+                                <img class="container-logo__img" src="../img/huellitas.svg" alt="imagen">
+                            </a>
+                        </div>
+
+
+                        <div class="container-redes__social">
+
+
+                            <a class="links" href="#"><i class="fa-brands fa-facebook icon"></i></a>
+
+                            <a class="links" href="#"><i class="fa-brands fa-instagram icon"></i></a>
+
+                            <a class="links" href="#"><i class="fa-brands fa-x-twitter icon"></i></a>
+                        </div>
+
+                        <div class="final-container">
+                            <p>&copy; 2020 Golden Trainers</p>
+                        </div>
+                    </div>
+                    <!--El copyright-->
+                </div>
+            </div>
+        </div><!--Termina el Footer-->
+        </footer>
+        <script src="https://kit.fontawesome.com/ac73cba268.js" crossorigin="anonymous"></script>
         <script src="../js/registroUsuarios.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

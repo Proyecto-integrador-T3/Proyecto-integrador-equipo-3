@@ -30,8 +30,17 @@
     font-size:var(--tamaño-subtitulos);
     color:var(--color-fondo-barra-navegacion);
 }
-#tituloPrincipal:hover {
-    box-shadow: 5px 5px var(--color-fondo-barra-navegacion), 11px 11px var(--color-fondo-barra-navegacion), 7px 7px var(--color-fondo-barra-navegacion);
-    transform: translateX(-3px);;
-    transition: 2s;
+@keyframes mover {
+    0% {
+        box-shadow: none;
+        transform: translateX(0);
     }
+    100% {
+        box-shadow: 5px 5px var(--color-fondo-barra-navegacion), 11px 11px var(--color-fondo-barra-navegacion), 7px 7px var(--color-fondo-barra-navegacion);
+        transform: translateX(-3px);
+    }
+}
+
+#tituloPrincipal {
+    animation: mover 4s forwards;
+}

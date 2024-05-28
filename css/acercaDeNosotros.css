@@ -3,7 +3,67 @@
     background-color: #CCE6F4;
 }
 
-#tituloQuienesSomos, #tituloNuestroEquipo {
+.container .heading {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .container .heading h1{
+        font-size: 40px;
+    }
+
+    .content, .image {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.content {
+    width: 50%;
+    margin: 0px 25px;
+    transition: 0.4s ease;
+}
+.content:hover {
+    transform: translateY(-10px);
+}
+
+.content p {
+    color: #666;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.image {
+    width: 50%;
+    transition: 0.4s ease;
+}
+
+.image:hover {
+    transform: translateY(-10px);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+#tituloQuienesSomos, #tituloNuestroEquipo, .heading {
     color: #780000;
     font-size: 85px;
     font-family: "Poppins", sans-serif;
@@ -11,9 +71,17 @@
     font-style: normal;
 }
 
-#textoQuienesSomos, #listado-valores, #texto-vision, #texto-mision, .card-text {
+.content p {
     color: #780000;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#textoQuienesSomos, #listado-valores, #texto-vision, #texto-mision, .card-text  {
+    color: #780000;
+    font-size: 20px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -34,8 +102,20 @@
    font-style: normal;
    height: 100%;
    border-radius: 10px;
-   background-color: aliceblue;
+   background: linear-gradient(to left, aliceblue 50%, #FDF0D5 50%);
+   background-size: 200%;
+   background-position: right;
+   transition: background-position 0.5s ease-out;
   }
+#tituloMision:hover{
+    background-position: left;
+}
+#tituloVision:hover{
+    background-position: left;
+}
+#tituloValores:hover{
+    background-position: left;
+}
 
 #div-objetivos, #div-body {
     padding-top: 15px;
@@ -44,6 +124,15 @@
 #column-mision, #column-vision, #column-valores {
     padding-bottom: 10px;
 }
+
+#tarjetas-equipo {
+    padding-bottom: 45px;
+}
+
+svg {
+    color: #780000;
+  }
+  
 
 .card-img-top {
     width: 100%;
@@ -57,4 +146,11 @@
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-style: normal;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+.card {
+    transition: transform .5s;
 }
