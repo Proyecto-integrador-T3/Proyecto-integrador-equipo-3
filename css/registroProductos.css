@@ -52,3 +52,7 @@
     background-color: var(--color-fondo-paginas);
     color: var(--color-fondo-barra-navegacion);
 }
+
+.logo {
+    width: 150px;
+}

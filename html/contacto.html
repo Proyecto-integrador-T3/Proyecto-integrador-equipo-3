@@ -13,8 +13,6 @@
 </head>
 
 <body id="idbody">
-
-    <!--Inicio de navbar-->
     <nav class="navbar navbar-expand-lg" style="background-color: var(--color-fondo-barra-navegacion);">
         <div class="container">
             <div>
@@ -36,8 +34,7 @@
                     <div class="nav-item">
                         <img src="/img/iconoUsuarios.svg" alt="Icono barra de navegación" class="iconoNavbar">
                         <a class="nav-link" href="./acercaDeNosotros.html"
-                            style="color: var(--color-texto-barra-navegacion);">Acerca de
-                            nosotros</a>
+                            style="color: var(--color-texto-barra-navegacion);">Acerca de nosotros</a>
                     </div>
                     <div class="nav-item">
                         <img src="/img/iconoCatalogo.svg" alt="Icono barra de navegación" class="iconoNavbar">
@@ -47,21 +44,17 @@
                     <div class="nav-item">
                         <img src="/img/iconoUsuario.svg" alt="Icono barra de navegación" class="iconoNavbar">
                         <a class="nav-link" href="../CRUD/login.html"
-                            style="color: var(--color-texto-barra-navegacion);">Iniciar
-                            sesión Registrarse</a>
+                            style="color: var(--color-texto-barra-navegacion);">Iniciar sesión Registrarse</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!--Inicio de pagina de Contacto-->
-    <!-- Creamos un contenedor dividido en dos columnas, cada una para un mensaje diferente. -->
     <div class="container mt-3">
         <div class="row">
             <div class="col-l-6" id="dudas">
                 <h4>¿Tienes algún problema, duda, queja o sugerencia?</h4>
-                
             </div>
         </div>
     </div>
@@ -73,66 +66,64 @@
                 <div class="text-center">
                     <img src="../img/contact_support.svg" width="48" alt="">
                 </div>
-                <h2 class="fw-bold text-center pt-5 mb-5">Contáctanos</h2>
+                <h2 class="fw-bold text-center pt-3 mb-5">Contáctanos</h2>
 
                 <!-- Formulario de contacto -->
-                <form action="https://formsubmit.co/sergiosm548@gmail.com" method="POST" />
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="2660052e-0a11-4a66-9e69-5166ba5531ac">
 
-                    <!--Input Nombre completo-->
                     <div class="mb-4 position-relative">
-                        <label for="text" class="form-label">Nombre Completo</label>
+                        <label for="exampleInputName" class="form-label">Nombre Completo</label>
                         <div class="input-group">
                             <span class="input-group-text"><img src="../img/person-fill.svg"
-                                    alt="iconoNombreCompleto"></span><!--Cambiar icono por icono de email-->
-                            <input type="text" class="form-control" name="fullName"
-                                placeholder="Ingresa tu Nombre Completo">
+                                    alt="iconoNombreCompleto"></span>
+                            <input type="text" class="form-control" id="exampleInputName" name="fullName"
+                                placeholder="Ingresa tu nombre completo">
                         </div>
                         <div class="alert alert-danger mt-2 d-none" id="fullNameAlert" role="alert">
-                            El nombre completo no puede estar vacio.
+                            El nombre completo no puede estar vacío.
                         </div>
                     </div>
 
-                    <!--Input Número de teléfono-->
                     <div class="mb-4 position-relative">
-                        <label for="tel" class="form-label">Número de teléfono</label>
+                        <label for="exampleInputPhone" class="form-label">Número de teléfono</label>
                         <div class="input-group">
                             <span class="input-group-text"><img src="../img/contact_phone.svg"
-                                    alt="iconoTelefono"></span><!--Cambiar icono por icono de telefono-->
-                            <input type="tel" class="form-control" maxlength="10" minlength="10" name="cellNumber"
-                                placeholder="Ingresa tu Número de teléfono">
+                                    alt="iconoTelefono"></span>
+                            <input type="tel" class="form-control" id="exampleInputPhone" maxlength="10" minlength="10"
+                                name="cellNumber" placeholder="Ingresa tu número de teléfono">
                         </div>
                         <div class="alert alert-danger mt-2 d-none" id="cellNumberAlert" role="alert">
-                            Por favor ingresa un número de telefono valido.
+                            Por favor ingresa un número de teléfono válido.
                         </div>
                     </div>
 
-                    <!--Input Correo-->
                     <div class="mb-4 position-relative">
-                        <label for="email" class="form-label">Correo</label>
+                        <label for="exampleInputEmail1" class="form-label">Correo</label>
                         <div class="input-group">
                             <span class="input-group-text"><img src="../img/mail.svg" alt="iconoCorreo"></span>
-                            <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
-                            <br>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                                placeholder="Ingresa tu correo">
                         </div>
                         <div class="alert alert-danger mt-2 d-none" id="emailAlert" role="alert">
-                            Por favor ingresa un correo valido.
+                            Por favor ingresa un correo válido.
                         </div>
                     </div>
-                    <!--Input Correo-->
+
                     <div class="mb-4 position-relative">
-                        <label for="comments" class="form-label">Comentarios</label>
+                        <label for="floatingTextarea" class="form-label">Comentarios</label>
                         <div class="input-group">
-                            
-                            <textarea class="form-control" name="comments" placeholder="Ingresa tus comentarios" rows="4"></textarea>
-                            <br>
+                            <textarea class="form-control" id="floatingTextarea" name="comments"
+                                placeholder="Ingresa tus comentarios" rows="4"></textarea>
                         </div>
                         <div class="alert alert-danger mt-2 d-none" id="commentsAlert" role="alert">
                             Por favor ingresa tus comentarios.
                         </div>
                     </div>
-
-
-                    <!--Boton registrarse-->
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <div class="alert alert-danger mt-2 d-none" id="captchaAlert" role="alert">
+                        Por favor completa el captcha.
+                    </div>
                     <div class="d-grid pt-1">
                         <button type="submit" class="btn" id="botonEnviar">Enviar</button>
                     </div>
@@ -141,12 +132,9 @@
         </div>
     </div>
 
-    <!--Inicia el Footer-->
     <div class="footer">
         <div class="row p-5 text-white pb-2" style="background-color: #780000;">
-            <!--Columnas-->
             <div class="col-xs-12 col-md-6 col-lg-3">
-                <!--Agregamos los links-->
                 <a href="../index.html" style="color: whitesmoke; text-decoration: none;">Inicio</a>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3">
@@ -157,15 +145,13 @@
                     nosotros</a>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3">
-                <a href="./Catalogo.html" style="color: whitesmoke; text-decoration: none;">Cátalogo</a>
+                <a href="./Catalogo.html" style="color: whitesmoke; text-decoration: none;">Catálogo</a>
             </div>
 
             <hr>
 
             <div>
-                <!--Redes-->
                 <div class="container-redes">
-                    <!--Las patitas-->
                     <div class="container-logo">
                         <a href="#">
                             <img class="container-logo__img" src="../img/huellitas.svg" alt="imagen">
@@ -180,16 +166,16 @@
                         <p>&copy; 2020 Golden Trainers</p>
                     </div>
                 </div>
-                <!--El copyright-->
             </div>
         </div>
-    </div><!--Termina el Footer-->
+    </div>
 
     <script src="https://kit.fontawesome.com/ac73cba268.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../js/contacto2.js"></script>
+    <script src="../js/contacto.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>

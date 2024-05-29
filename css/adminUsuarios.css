@@ -130,3 +130,6 @@ form .inputField > div input {
 .newUser:hover{
     background: var(--color-texto-barra-navegacion);
 }
+.logo {
+    width: 150px;
+}

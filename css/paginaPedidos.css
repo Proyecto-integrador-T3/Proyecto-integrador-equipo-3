@@ -85,3 +85,6 @@ form .inputField>div select {
 .newUser:hover {
     background: var(--color-texto-barra-navegacion);
 }
+.logo {
+    width: 150px;
+}
