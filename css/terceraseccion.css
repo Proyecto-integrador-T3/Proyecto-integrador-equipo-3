@@ -3,9 +3,13 @@
 
 .columna-texto{
     text-align: left;
-    font-size: 23px;
+    font-size: 25px;
     color: black;
 
     overflow: hidden;
     height: 600px;
+}
+.columna-texto> h1{
+    font-size: 50px;
+    text-align: center;
 }

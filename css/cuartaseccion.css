@@ -14,7 +14,7 @@
     grid-template-columns: auto auto; /* Dos columnas, la izquierda más ancha que la derecha */
 
     padding: 20px; /* Añade algo de espacio alrededor del contenedor */
-
+    height: 750px;
     margin: 50px;
 
 }
@@ -25,18 +25,26 @@
 }
 .bloque-adiestramientos{
     height: 300px;
-    width: 700px;
+    width: 750px;
+    display: block;
+    align-content: center;
+    
 }
 
 .bloque-beneficios{
     height: 300px;
-    width: 700px;
+    width: 750px;
+    display: block;
+    align-content: center;
 }
 .bloque-llamado-accion{
     grid-column: 1/3;
-    width: 700px;
+    width: 800px;
     height: 300px;
     margin: 20px auto; 
+
+    display: block;
+    align-content: center;
 
 }
 .bloque-adiestramientos >h1{

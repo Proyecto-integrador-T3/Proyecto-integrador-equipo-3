@@ -7,7 +7,10 @@
 #primeraseccion{
     overflow: hidden;
 }
-
+.card{
+    background-color: #CCE6F4;
+    border: none;
+}
 .card-img{
     overflow: hidden;
 }
@@ -23,12 +26,12 @@
 #texto1p {
     color: var(--color-dorado);
     font-family: var(--fuente-titutlos);
-    font-size: 28px;
+    font-size: 25px;
     text-align: left;   
     color: black;
 
     padding-top: 40px;
-    padding-right:200px;
+    padding-right:260px;
     max-height: 380px;
     overflow: hidden;
 }
