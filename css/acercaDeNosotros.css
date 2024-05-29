@@ -42,12 +42,7 @@
     transform: translateY(-10px);
 }
 
-.content p {
-    color: #666;
-    font-size: 19px;
-    line-height: 1.5;
-    margin-top: 10px;
-}
+
 
 .image {
     width: 50%;
@@ -65,15 +60,15 @@
 
 #tituloQuienesSomos, #tituloNuestroEquipo, .heading {
     color: #780000;
-    font-size: 85px;
+    font-size: 80px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .content p {
-    color: #780000;
-    font-size: 20px;
+    color: #33384a;
+    font-size: 21px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -87,16 +82,15 @@
     font-style: normal;
 }
 
-.carousel-inner > .carousel-item > img {
-    width:100%;
-    height:400px;
-    border-radius: 10px;
-  }
+.card-text {
+    margin-top: 10px;
+}
+
 
 #tituloMision, #tituloVision, #tituloValores {
    text-align: center; 
    color: #780000;
-   font-size: 36px;
+   font-size: 30px;
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-style: normal;
@@ -142,10 +136,16 @@ svg {
 
 .card-title {
    color: #780000 !important;
-   font-size: 36px;
+   font-size: 30px;
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-style: normal;
+}
+
+.card-body {
+    background: aliceblue;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
 }
 
 .card:hover {
@@ -153,4 +153,5 @@ svg {
 }
 .card {
     transition: transform .5s;
+    
 }
