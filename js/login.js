@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var passwordAlert = document.getElementById("passwordAlert");
 
     // Agregar un event listener para el evento submit
-    loginForm.addEventListener("submit", function (event) {
+    loginForm.addEventListener("submit", async function (event) {
         // Evitar el comportamiento predeterminado del formulario
         event.preventDefault();
 
@@ -36,18 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
             passwordAlert.classList.add("d-none");
         }
 
-        // Obtener datos almacenados en localStorage
-        var storedUserData = localStorage.getItem("userData");
-        
-        // Convertir los datos almacenados de JSON a objeto
-        var userData = JSON.parse(storedUserData);
+        try {
+            // Enviar la solicitud POST al backend para el inicio de sesión
+            let response = await fetch('http://localhost:8081/api/users/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            });
 
-        // Verificar si los datos coinciden
-        if (email === userData.email && password === userData.password) {
-            // Redirigir a la página de inicio
+            // Verificar si la respuesta es exitosa
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            let data = await response.json();
+            console.log('Success:', data);
+            // Redirigir a la página de inicio si el inicio de sesión fue exitoso
             window.location.href = "../index.html";
             alert("¡Bienvenido!");
-        } else {
+        } catch (error) {
+            console.error('Error:', error);
             alert("Correo electrónico o contraseña incorrectos.");
         }
     });
