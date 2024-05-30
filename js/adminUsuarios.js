@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const form = document.getElementById('myForm');
+    const addForm = document.getElementById('addForm');
     const dataContainer = document.getElementById('data');
     let users = [];
 
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${user.id}</td>
-                <td><img src="${user.picture}" width="50" height="50" alt="Imagen de Perfil"></td>
                 <td>${user.name}</td>
+                <td>${user.number}</td>
                 <td>${user.email}</td>
                 <td>
                     <button class="btn btn-info" onclick="viewUser(${index})"><i class="bi bi-eye"></i></button>
@@ -42,12 +42,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadUsers();
 
     // Función para añadir un nuevo usuario
-    form.addEventListener('submit', async (e) => {
+    addForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const newUser = {
-            id: document.getElementById('id').value,
-            picture: document.querySelector('.img').src,
             name: document.getElementById('name').value,
+            number: document.getElementById('number').value,
             email: document.getElementById('email').value,
             password: document.getElementById('password').value
         };
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const addedUser = await response.json();
             users.push(addedUser);
             renderTable();
-            form.reset();
+            addForm.reset();
             document.querySelector('.btn-close').click();
         } catch (error) {
             console.error('Error:', error);
@@ -80,7 +79,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.viewUser = (index) => {
         const user = users[index];
         document.getElementById('showId').value = user.id;
-        document.querySelector('.showImg').src = user.picture;
         document.getElementById('showName').value = user.name;
         document.getElementById('showEmail').value = user.email;
         new bootstrap.Modal(document.getElementById('readData')).show();
@@ -88,12 +86,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     window.editUser = (index) => {
         const user = users[index];
-        document.getElementById('id').value = user.id;
-        document.querySelector('.img').src = user.picture;
-        document.getElementById('name').value = user.name;
-        document.getElementById('email').value = user.email;
-        document.getElementById('password').value = user.password;
-        new bootstrap.Modal(document.getElementById('userForm')).show();
+        document.getElementById('editId').value = user.id;
+        document.getElementById('editName').value = user.name;
+        document.getElementById('editNumber').value = user.number;
+        document.getElementById('editEmail').value = user.email;
+        document.getElementById('editPassword').value = user.password;
+        new bootstrap.Modal(document.getElementById('editForm')).show();
     };
 
     window.deleteUser = async (index) => {
@@ -114,14 +112,4 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert('No se pudo eliminar el usuario');
         }
     };
-
-    // Función para previsualizar la imagen cargada
-    document.getElementById('imgInput').addEventListener('change', (e) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-            document.querySelector('.img').src = reader.result;
-        };
-        reader.readAsDataURL(e.target.files[0]);
-    });
 });
-
