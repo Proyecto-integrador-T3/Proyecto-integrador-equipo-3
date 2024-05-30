@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('botonRegistrarse').addEventListener('click', function (event) {
+    document.getElementById('botonRegistrarse').addEventListener('click', async function (event) {
         event.preventDefault();
 
         // Variables para guardar los valores de los campos del formulario
@@ -62,21 +62,36 @@ document.addEventListener('DOMContentLoaded', function () {
         // Si no hay errores, se puede proceder con el envío del formulario
         if (!hasError) {
             var userData = {
-                fullName: fullName,
-                cellNumber: cellNumber,
+                name: fullName,
+                number: cellNumber,
                 email: email,
                 password: password
             };
 
-            // Convertir el objeto userData a JSON
-            var jsonData = JSON.stringify(userData);
+            console.log('Enviando datos del usuario:', userData);
 
-            // Guardar el JSON en el contenido local
-            localStorage.setItem('userData', jsonData);
+            try {
+                // Enviar la solicitud POST al backend usando async/await
+                let response = await fetch('http://localhost:8081/api/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
 
-            // Redirige a la pagina de registro exitoso
-            window.location.href = '../html/registroExitoso.html';
+                // Verificar si la respuesta es exitosa
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
 
+                let data = await response.json();
+                console.log('Success:', data);
+                // Redirige a la página de registro exitoso
+                window.location.href = '../html/registroExitoso.html';
+            } catch (error) {
+                console.error('Error:', error);
+            }
         }
     });
 });
